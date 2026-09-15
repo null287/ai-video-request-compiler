@@ -1,0 +1,12 @@
+# 不应进入公开仓库的本地文件
+private/
+original/
+source-materials/
+*.local.md
+*.internal.md
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.log

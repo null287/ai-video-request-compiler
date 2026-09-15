@@ -1,0 +1,13 @@
+# AI Video Request Compiler
+
+> A tool-agnostic method for compiling an AI-video request into an executable, reviewable production brief.
+
+## Start here
+
+- [Complete repository context](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt): Read this entire file first and verify its begin/end manifest ID.
+- [AI execution entrypoint](https://github.com/null287/ai-video-request-compiler/blob/main/AI-ENTRYPOINT.md)
+- [Stable V1 specification](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md)
+- [Request input template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/01-request-brief.md)
+- [Execution draft template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/02-ai-execution-draft.md)
+
+Read the complete repository context first. Return the read receipt defined in README before processing the request. Use the repository as rules and the user's accompanying request as input. If no request is supplied, ask for it. Never invent missing project facts.

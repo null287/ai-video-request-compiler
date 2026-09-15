@@ -1,0 +1,1393 @@
+# AI Video Request Compiler — Full Repository Context
+This file contains every canonical public source file in the repository.
+REPOSITORY-CONTENT-BEGIN:a5a80f2db9a7a040cd9da908a4f4ecf7157ec8813acb6e5f8658d3ff19438db5
+SOURCE-FILE-COUNT:16
+
+## Content manifest
+
+```json
+{
+  "schema_version": 1,
+  "canonicalization": "UTF-8 text with CRLF and CR normalized to LF",
+  "source_file_count": 16,
+  "files": [
+    {
+      "path": ".github/workflows/verify-content-integrity.yml",
+      "sha256": "a4109e9605ef18e52682fed3feea95b552013f4dcf7b0da963b7763f8aa969bc",
+      "bytes": 432,
+      "lines": 21
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "8c6c5d693bf65041792fefb036511170e5eafcb96a86fa69217f2a1cc17aa9f7",
+      "bytes": 140,
+      "lines": 12
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a149e8512862f",
+      "bytes": 1236,
+      "lines": 21
+    },
+    {
+      "path": "AI-ENTRYPOINT.md",
+      "sha256": "cbed06787d52678caf305890ffe9e545affd1dbd35f134d606617c6e996bcb14",
+      "bytes": 1937,
+      "lines": 42
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad01d12071128d02e7",
+      "bytes": 644,
+      "lines": 11
+    },
+    {
+      "path": "docs/01-request-brief.md",
+      "sha256": "e097d6b8c0c888e02eaea387707b9d30b3a1dff0e3e7cbc47d8f287a6450772f",
+      "bytes": 3048,
+      "lines": 128
+    },
+    {
+      "path": "docs/02-ai-execution-draft.md",
+      "sha256": "35f6c4e724703ec1b5b656439fca056a7c84477232c50fcc64f02d6a3488360a",
+      "bytes": 5224,
+      "lines": 186
+    },
+    {
+      "path": "docs/03-review-and-cost-gates.md",
+      "sha256": "0dfdcbd088a5a9e796034ea7ee7323e8b31e13fe9efb803db248cde35156a202",
+      "bytes": 2637,
+      "lines": 84
+    },
+    {
+      "path": "docs/04-publication-boundary.md",
+      "sha256": "60fa6b548086dc6e868675fa419f40809fc5b57d9a7b5d0b15dfb47c43feabaa",
+      "bytes": 2459,
+      "lines": 48
+    },
+    {
+      "path": "docs/05-public-release-risk-map.md",
+      "sha256": "366431c74fb307fc0560ad6a4eeb9de3832c62d4455a16da7781d8c1023e186a",
+      "bytes": 5177,
+      "lines": 66
+    },
+    {
+      "path": "docs/ai-video-request-compiler-v1.md",
+      "sha256": "8ad180c344fcebfc60861a83922e7fe2ed1963a2eaf075604ba0118ce99bdd42",
+      "bytes": 6788,
+      "lines": 207
+    },
+    {
+      "path": "examples/fictional-product-example.md",
+      "sha256": "d756f3492cda8b030cdcaf23510bcf6971f08c34d056d1010221fe942a5c13b9",
+      "bytes": 1923,
+      "lines": 55
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "a8bbcc7d91fa0d3a71521af867c52bbcbe0c3935b14aefbf5b964fa53e4881de",
+      "bytes": 844,
+      "lines": 9
+    },
+    {
+      "path": "llms.txt",
+      "sha256": "6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232ef85192a67",
+      "bytes": 1108,
+      "lines": 13
+    },
+    {
+      "path": "README.md",
+      "sha256": "0fb748aa7e982cbc76eeedabd01e09728718985f866ec2c9dc7c692fe680621b",
+      "bytes": 5942,
+      "lines": 117
+    },
+    {
+      "path": "scripts/build-content-bundle.mjs",
+      "sha256": "785b83e6158412e975ad48a7cc65cc735b3b41dbf18b80c61c5366f49f0abf16",
+      "bytes": 5321,
+      "lines": 176
+    }
+  ],
+  "manifest_id": "a5a80f2db9a7a040cd9da908a4f4ecf7157ec8813acb6e5f8658d3ff19438db5",
+  "bundle": "llms-full.txt",
+  "checksum_file": "SHA256SUMS"
+}
+```
+
+## File 1/16: .github/workflows/verify-content-integrity.yml
+
+FILE-CONTENT-BEGIN:.github/workflows/verify-content-integrity.yml:a4109e9605ef18e52682fed3feea95b552013f4dcf7b0da963b7763f8aa969bc
+name: Verify content integrity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Show Node.js version
+        run: node --version
+
+      - name: Verify full-context bundle and checksums
+        run: node scripts/build-content-bundle.mjs --check
+FILE-CONTENT-END:.github/workflows/verify-content-integrity.yml:a4109e9605ef18e52682fed3feea95b552013f4dcf7b0da963b7763f8aa969bc
+
+## File 2/16: .gitignore
+
+FILE-CONTENT-BEGIN:.gitignore:8c6c5d693bf65041792fefb036511170e5eafcb96a86fa69217f2a1cc17aa9f7
+# 不应进入公开仓库的本地文件
+private/
+original/
+source-materials/
+*.local.md
+*.internal.md
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.log
+FILE-CONTENT-END:.gitignore:8c6c5d693bf65041792fefb036511170e5eafcb96a86fa69217f2a1cc17aa9f7
+
+## File 3/16: AGENTS.md
+
+FILE-CONTENT-BEGIN:AGENTS.md:63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a149e8512862f
+# Agent instructions
+
+When this repository is supplied as context for an AI-video request:
+
+1. Read `llms-full.txt` in full.
+2. Verify that its begin/end manifest IDs match and that every listed file has a closing marker.
+3. Return the repository read receipt defined in `README.md`.
+4. Read `AI-ENTRYPOINT.md` and `docs/ai-video-request-compiler-v1.md` in full.
+5. Treat the repository as the rule set and the user's accompanying request as input data.
+6. Produce the structured execution draft required by V1.
+7. Ask for missing facts instead of inventing them.
+8. State clearly when linked files or user-provided media cannot be accessed.
+
+Do not infer a real project from examples or repository metadata.
+
+For every public change:
+
+- Keep the repository anonymous by default.
+- Do not add a maintainer's real name, biography, employer, school, location, contact details, account details, project history, or other identifying information unless the maintainer explicitly requests that exact disclosure.
+- Use neutral descriptions such as “the project” or “the maintainer” when attribution is needed.
+- Scan source files, generated bundles, commit messages, and commit metadata for identifying information before publishing.
+FILE-CONTENT-END:AGENTS.md:63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a149e8512862f
+
+## File 4/16: AI-ENTRYPOINT.md
+
+FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:cbed06787d52678caf305890ffe9e545affd1dbd35f134d606617c6e996bcb14
+# AI 单链接执行入口
+
+本文件是 AI 通过仓库根链接读取本项目时的入口。开始执行前，必须完整读取：
+
+<https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt>
+
+只有同时满足以下条件，才能声明仓库读取完整：
+
+1. 看见 `REPOSITORY-CONTENT-BEGIN` 和 `REPOSITORY-CONTENT-END`；
+2. 两个标记携带相同的清单 ID；
+3. `FILE-CONTENT-END` 数量等于 `SOURCE-FILE-COUNT`；
+4. 清单中的每个路径都对应一组完整的文件开始和结束标记。
+
+核心执行规则只有一份：
+
+[`docs/ai-video-request-compiler-v1.md`](docs/ai-video-request-compiler-v1.md)
+
+稳定 V1 原始文件：
+
+<https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md>
+
+## 执行顺序
+
+1. 先返回 README 规定的【仓库读取回执】。
+2. 完整读取核心 V1 文件，不要只根据 README 摘要执行。
+3. 将用户随仓库链接提供的文字、图片、视频、界面、台词和素材说明作为需求输入。
+4. 按 V1 的输出结构生成《AI 视频执行稿》。
+5. 严格区分“已确认”“待确认”“风险/冲突”和“不可变内容”。
+6. 不自行补充未经用户确认的剧情、人物关系、产品功能、台词或结果承诺。
+7. 用户没有提供具体需求时，先请用户提供需求；不要把仓库示例当成真实任务。
+8. 无法读取某个文件或素材时，明确说明读取限制，不得假装已经读取。
+
+## 仓库链接的预期行为
+
+当用户发送本仓库链接并要求“按此规范处理需求”时：
+
+- 仓库内容是处理规则；
+- 用户提供的具体需求是待处理数据；
+- 输出结果是结构化的 AI 视频执行稿；
+- 信息不足时先列出待确认项，而不是替用户做决定。
+
+如果当前 AI 不具备网页访问能力，请用户直接上传核心 V1 Markdown 文件。
+FILE-CONTENT-END:AI-ENTRYPOINT.md:cbed06787d52678caf305890ffe9e545affd1dbd35f134d606617c6e996bcb14
+
+## File 5/16: CHANGELOG.md
+
+FILE-CONTENT-BEGIN:CHANGELOG.md:b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad01d12071128d02e7
+# 更新记录
+
+## V1 — 2026-09-14
+
+- 采用角色中立的公开表达，只描述给 AI 提需求的共同流程。
+- 增加 GitHub 链接读取顺序，说明 `main`、固定版本和 Raw Markdown 的差异。
+- 增加“已确认 / 待确认 / 风险冲突 / 不可变内容”的输出约束。
+- 保留需求编译、素材职责、台词锁定、时间轴和验收门禁等核心方法。
+- 公开说明统一采用中性表述，不记录特定组织、项目或内部背景。
+- 增加仓库根链接的 AI 执行入口与机器可读索引。
+- 增加全仓库文本包、逐文件 SHA-256、读取回执和自动完整性校验。
+FILE-CONTENT-END:CHANGELOG.md:b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad01d12071128d02e7
+
+## File 6/16: docs/01-request-brief.md
+
+FILE-CONTENT-BEGIN:docs/01-request-brief.md:e097d6b8c0c888e02eaea387707b9d30b3a1dff0e3e7cbc47d8f287a6450772f
+# AI 视频需求输入模板
+
+这份模板给需求方使用。不会写的字段填“待确认”，不要用“差不多”“高级一点”“参考一下”代替具体信息。
+
+## 1. 基础信息
+
+- 需求名称：
+- 视频用途：广告 / 产品介绍 / 社交媒体 / 活动 / 其他
+- 视频数量：
+- 单条目标时长：
+- 画幅：9:16 / 16:9 / 1:1 / 其他
+- 成片语言：
+- 是否口播：是 / 否
+- 是否字幕：是 / 否
+- 是否包含产品或 UI：是 / 否
+- 是否有固定结尾（ending）：
+- 最晚交付时间：
+- 可用预算或生成配额：由项目负责人填写，不在需求正文中猜测
+
+## 2. 视频目标
+
+- 这条视频要让观众理解什么：
+- 观众看完后应采取什么行动：
+- 必须出现的核心信息：
+- 禁止出现的信息或表达：
+
+## 3. 原始创意或分镜
+
+请按时间顺序描述，不要只写情绪或结果：
+
+```text
+0-X 秒：
+
+X-X 秒：
+
+X-X 秒：
+```
+
+## 4. 人物与场景
+
+### 人物
+
+- 人物数量：
+- 角色 ID：例如 R1、R2
+- 身份/关系：
+- 年龄段：
+- 性别呈现：
+- 外貌与服装：
+- 初始位置：
+- 必须保持的特征：
+- 允许变化的特征：
+
+### 场景
+
+- 地点：
+- 时间：
+- 背景：
+- 光线：
+- 整体风格：
+- 必须保留的空间关系：
+
+## 5. 台词、字幕与声音
+
+正式台词请逐字粘贴，并标明说话者和时间：
+
+| 角色 ID | 时间 | 台词原文 | 是否必须逐字保留 |
+| --- | --- | --- | --- |
+| R1 |  |  | 是 / 否 |
+
+- 字幕内容是否与台词一致：
+- 背景音乐：
+- 环境声/音效：
+- 是否保留参考素材原声：
+
+## 6. 参考素材职责
+
+每份素材只填写它负责提供的内容：
+
+| 素材 ID | 类型 | 来源/链接 | 参考时间段 | 只继承 | 明确不继承 | 权利状态 |
+| --- | --- | --- | --- | --- | --- | --- |
+| REF-01 | 图片/视频/UI/音频 |  |  |  |  | 已确认 / 待确认 |
+
+### 常见继承项
+
+- 人物外观、服装、构图；
+- 动作顺序、走位、运镜、节奏；
+- 场景结构、产品角度、UI 布局；
+- 声音特征、环境声或音乐节奏。
+
+### 常见排除项
+
+- 原人物、原背景、原品牌、原 Logo；
+- 原字幕、原台词、原声音；
+- 未被需求明确确认的产品功能、文字和 UI。
+
+## 7. 产品与 UI
+
+- 产品名称：
+- 必须展示的真实功能：
+- 屏幕中必须出现的内容：
+- UI 出现时间：
+- 触发 UI 的动作：
+- 展示设备：
+- 停留时间：
+- 禁止虚构的按钮、结果、数字或功能：
+
+## 8. 验收标准
+
+- 画面必须出现：
+- 动作必须完成：
+- 人物必须保持：
+- 台词必须完整且由正确角色说出：
+- UI 必须展示：
+- 禁止出现：
+
+## 9. 提交前自检
+
+- [ ] 时长明确
+- [ ] 数量明确
+- [ ] 画幅和语言明确
+- [ ] 原始台词已锁定
+- [ ] 参考素材有来源、时间段和职责
+- [ ] 保留项和排除项明确
+- [ ] 人物、背景、动作、镜头边界明确
+- [ ] UI、字幕、ending 明确
+- [ ] 最终验收标准明确
+- [ ] 待确认项已经列出
+
+FILE-CONTENT-END:docs/01-request-brief.md:e097d6b8c0c888e02eaea387707b9d30b3a1dff0e3e7cbc47d8f287a6450772f
+
+## File 7/16: docs/02-ai-execution-draft.md
+
+FILE-CONTENT-BEGIN:docs/02-ai-execution-draft.md:35f6c4e724703ec1b5b656439fca056a7c84477232c50fcc64f02d6a3488360a
+# AI 视频需求编译与执行稿模板
+
+将本文件连同一份已填写的需求输入交给 AI。AI 的职责是编译和检查，不是替需求方做未经确认的创意决定。
+
+## 可直接复制给 AI 的系统说明
+
+```text
+你是 AI 视频需求编译助手，不是未经授权的广告创意补全器。
+
+你的任务是把输入中的文字、图片、视频、UI、台词和产品资料，整理成供制作人员执行的《AI 视频执行稿》。
+
+必须遵守：
+1. 不自行增加剧情、人物关系、产品功能、台词、品牌或结果承诺。
+2. 不把“感觉”“高级一点”“有冲击力”等模糊词直接写进执行稿；改为待确认问题。
+3. 正式台词必须逐字保留，不得改写、翻译、润色、删减或补句。
+4. 参考素材必须拆分为“只继承”和“明确不继承”；不能默认全部继承。
+5. 图片主要说明外观、静态状态和构图；视频主要说明动作、运镜、节奏和连续变化；UI 只能证明已经存在的界面结构和文字。
+6. 看不到或无法逐帧读取的素材，必须明确说无法核验，不得假装看过。
+7. 信息不足时标记【待确认】；存在事实、权利、时长或可执行风险时标记【需要确认】。
+8. 在完成时长检查、待确认问题和验收标准前，不要输出“可以直接生成”的结论。
+
+请严格按以下结构输出完整最新版，不要使用“其他不变”“沿用上一版”等残缺引用。
+```
+
+## 输出格式
+
+# 【AI 视频执行需求】
+
+## 1. 需求理解
+
+- 核心目标：
+- 视频用途：
+- 观众最终看到：
+- 已确认事实：
+- 【待确认】：
+- 【需要确认】：
+
+## 2. 制作参数
+
+- 视频时长：
+- 视频数量：
+- 画幅：
+- 成片语言：
+- 口播：
+- 字幕：
+- UI：
+- ending：
+
+## 3. 需求类型判断
+
+从以下类型中选择，并说明依据：
+
+- 复刻：保留明确的结构、动作、镜头或节奏；
+- 人物替换：保持动作/镜头等指定项，只替换人物；
+- 背景替换：保持人物/动作/镜头等指定项，只替换环境；
+- 动作迁移：将动作和镜头逻辑迁移到新人物或新场景；
+- 视觉机制参考：只参考创意机制或视觉效果；
+- 新创：没有需要继承的参考结构。
+
+## 4. 参考素材分析
+
+| 素材 ID | 来源与可读性 | 用途 | 只继承 | 明确不继承 | 权利状态 |
+| --- | --- | --- | --- | --- | --- |
+| REF-01 |  |  |  |  |  |
+
+如果素材不可读取，写明：`无法逐帧分析，只能依据需求方文字描述整理。`
+
+## 5. 人物与场景
+
+### 角色表
+
+| 角色 ID | 身份 | 外貌/服装 | 初始位置 | 必须保持 | 可变化 |
+| --- | --- | --- | --- | --- | --- |
+| R1 |  |  |  |  |  |
+
+### 场景表
+
+| 场景 ID | 地点 | 背景 | 光线 | 空间关系 | 必须保持 |
+| --- | --- | --- | --- | --- | --- |
+| S1 |  |  |  |  |  |
+
+## 6. 视频执行时间轴
+
+按真实时间顺序拆分。每一段只写当前时刻发生的可见动作，不把多个难以同时完成的动作塞进一句话。
+
+### 0-X 秒
+
+- 画面：
+- 人物与位置：
+- 动作：
+- 镜头：景别、机位、运动
+- 声音：环境声、音乐、口播
+- 台词：逐字保留；没有则写“无”
+- UI：是否出现、出现位置和持续时间
+- 继承/排除：
+
+### X-X 秒
+
+- 画面：
+- 人物与位置：
+- 动作：
+- 镜头：
+- 声音：
+- 台词：
+- UI：
+- 继承/排除：
+
+（持续到视频结束。）
+
+## 7. 台词绑定
+
+| 角色 ID | 时间 | 台词原文 | 张嘴者 | 同期动作 | 其他人物状态 |
+| --- | --- | --- | --- | --- | --- |
+| R1 |  |  | R1 |  |  |
+
+检查：台词是否超出时长、说话者是否明确、口型或后期方案是否需要确认。
+
+## 8. UI 展示绑定
+
+如果包含手机、App、网页或界面，必须填写：
+
+- 出现时间：
+- 触发动作：
+- 展示设备：
+- 屏幕内容：
+- 停留时间：
+- UI 来源：
+- 禁止新增的文字/按钮/功能：
+
+## 9. 时长可执行检查
+
+| 内容 | 预计占用时间 | 依据 | 风险 |
+| --- | ---: | --- | --- |
+| 口播 |  |  |  |
+| 人物动作 |  |  |  |
+| 人物反应 |  |  |  |
+| 镜头变化 |  |  |  |
+| UI 展示 |  |  |  |
+
+- 目标总时长：
+- 预计总需求：
+- 判断：可执行 / 不可执行 / 待确认
+
+不可执行时，只能提出调整选项，不得擅自删改正式台词或核心剧情：
+
+1. 延长时长；
+2. 减少非核心动作；
+3. 拆分为多条视频；
+4. 独立处理音频或口型；
+5. 将 UI 或文字交给后期处理。
+
+## 10. 生成前风险清单
+
+- [ ] 需求事实完整
+- [ ] 台词已锁定
+- [ ] 参考素材职责清晰
+- [ ] 人物、动作、镜头和场景不冲突
+- [ ] 产品功能和 UI 没有未经确认的新增内容
+- [ ] 版权/肖像/声音/音乐/字体权利状态明确
+- [ ] 时长可执行
+- [ ] 生成数量与预算/配额已由负责人确认
+
+## 11. 最终验收标准
+
+### 必须看到
+
+-
+
+### 必须完成
+
+-
+
+### 必须保持
+
+-
+
+### 禁止出现
+
+-
+
+## 12. 最终结论
+
+- 当前状态：可进入样片验证 / 需补充信息 / 不可执行
+- 开工前必须确认：
+- 建议先验证的最小样片：
+- 仍然不能由 AI 自行决定的内容：
+FILE-CONTENT-END:docs/02-ai-execution-draft.md:35f6c4e724703ec1b5b656439fca056a7c84477232c50fcc64f02d6a3488360a
+
+## File 8/16: docs/03-review-and-cost-gates.md
+
+FILE-CONTENT-BEGIN:docs/03-review-and-cost-gates.md:0dfdcbd088a5a9e796034ea7ee7323e8b31e13fe9efb803db248cde35156a202
+# 审核、成本与交付门禁
+
+这份文件描述一种通用的生产控制方法。具体预算、模型价格、审批人和时间点必须由每个组织自行填写，不应从别的项目复制。
+
+## 1. 最小验证原则
+
+一个批次不要在方向未确认时直接批量生成。建议按以下顺序：
+
+```text
+需求初审
+→ 执行稿确认
+→ 生成 1 条最小验证样片
+→ 记录审核结论
+→ 通过后扩量
+→ 整批验收
+→ 交付归档
+```
+
+等待审核期间可以处理其他已授权任务，但不能把“尚未明确通过”当成批量生成许可。
+
+## 2. 成本控制表
+
+| 批次 | 目标数量 | 已生成 | 单条预计成本 | 已消耗 | 剩余配额 | 审核状态 |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| B-001 |  |  |  |  |  | 待审核 |
+
+成本检查至少确认：
+
+- 预算或日配额的来源、单位和适用范围；
+- 模型、分辨率、时长和重试是否计费；
+- 失败任务是否收费；
+- 扩量前是否有明确审核结论；
+- 超出预算时谁能批准例外；
+- 成本记录是否能回溯到批次，而不是只看账户总额。
+
+## 3. 三道门禁
+
+### 门禁 A：需求可执行
+
+未满足以下条件时，只能输出待确认清单：
+
+- 时长、数量、画幅和语言明确；
+- 台词、产品事实和 UI 文字已锁定；
+- 参考素材的继承/排除边界明确；
+- 人物、动作、镜头和场景不存在明显冲突；
+- 预算或配额负责人已确认。
+
+### 门禁 B：样片可扩量
+
+样片至少检查：
+
+- 人物外观与服装连续性；
+- 手部、道具、设备之间的物理关系；
+- 动作顺序、镜头衔接和时间轴；
+- 口播、口型、字幕和台词完整性；
+- 产品 UI、CTA、ending 与需求一致；
+- 参考素材没有发生越界继承。
+
+只有指定审核人明确回复“可继续/通过”或组织规定的等价状态，才进入扩量。
+
+### 门禁 C：整批可交付
+
+- 文件数量与命名一致；
+- 画幅、时长、语言和编码符合要求；
+- 所有视频均通过最终检查；
+- 返工项已关闭或被明确记录；
+- 交付表、文件夹和版本号一致；
+- 外部发送、上传、填表和付费操作已获得当次授权。
+
+## 4. 失败归因
+
+不要把所有失败都归因于“模型随机”。建议区分：
+
+- 需求歧义；
+- 参考素材冲突；
+- Prompt 没有绑定素材职责；
+- 动作过载或时长不足；
+- 产品/UI 事实缺失；
+- 模型能力限制；
+- 音频、口型或后期链路问题；
+- 审核标准变化。
+
+每次重试前先写清楚改变了哪个变量，否则重试只是重复消耗。
+
+FILE-CONTENT-END:docs/03-review-and-cost-gates.md:0dfdcbd088a5a9e796034ea7ee7323e8b31e13fe9efb803db248cde35156a202
+
+## File 9/16: docs/04-publication-boundary.md
+
+FILE-CONTENT-BEGIN:docs/04-publication-boundary.md:60fa6b548086dc6e868675fa419f40809fc5b57d9a7b5d0b15dfb47c43feabaa
+# 公开发布安全清单
+
+本清单用于把既有实践整理成公开方法论时做最后一次检查。它不是法律意见；涉及雇佣合同、保密协议、著作权归属或发布授权时，应向有权限的权利人或专业律师确认。
+
+## A. 组织与商业秘密
+
+- [ ] 没有特定组织名称、项目代号、客户名称或内部产品名称
+- [ ] 没有内部 URL、账号、邮箱、密码、Token、Cookie 或截图
+- [ ] 没有真实需求单、交付记录、投放数据、KPI、预算数字或人员信息
+- [ ] 没有复制特定组织 SOP 的独特措辞、内部编号或未公开流程细节
+- [ ] 没有组织代码、内部接口、数据库结构、系统页面或私有 Skill
+- [ ] 已核对劳动合同、保密协议、适用的发布/开源政策
+- [ ] 已确认自己有权公开并授权仓库中的文字、图片、代码和示例
+
+## B. 著作权与第三方内容
+
+- [ ] 公开版是抽象重写，不是把内部文件原样搬运
+- [ ] 所有示例人物、品牌、产品、画面、音乐、字体和 Logo 都是自有、已获授权或完全虚构
+- [ ] 没有把参考视频下载、截图或关键帧直接放进仓库
+- [ ] 没有复制其他开源仓库的代码、模板正文或许可证文本
+- [ ] 第三方参考只保留链接、名称和“参考思路”说明，并遵守其许可证
+- [ ] 仓库许可证与实际权利范围一致，不把无权授权的组织材料授予公众
+
+## C. 个人信息与隐私
+
+- [ ] 删除真实姓名、头像、联系方式、工号、群成员、客户联系人和可识别截图
+- [ ] 删除真人肖像、声音、面部特征、未成年人信息和健康/金融等敏感信息
+- [ ] 对案例中的人物、组织、数字和链接使用虚构或不可回溯占位符
+
+## D. 事实与署名
+
+- [ ] README 明确这是个人脱敏方法论，不代表任何特定组织或团队
+- [ ] 没有把团队成果写成个人独立完成
+- [ ] 没有声称上线、获奖、指标提升或组织采纳，除非有可公开证据
+- [ ] Git 提交作者、时间和变更说明准确
+- [ ] 版本号、变更记录和许可证状态清晰
+
+## E. 推送前技术检查
+
+```text
+git status
+git diff --check
+git grep -n -I -E "token|api[_-]?key|password|secret|cookie|内部|客户|工号|@"
+node scripts/build-content-bundle.mjs --check
+```
+
+检查结果不能替代人工审阅；尤其要逐页看 Markdown、图片元数据、历史提交和仓库设置。
+
+FILE-CONTENT-END:docs/04-publication-boundary.md:60fa6b548086dc6e868675fa419f40809fc5b57d9a7b5d0b15dfb47c43feabaa
+
+## File 10/16: docs/05-public-release-risk-map.md
+
+FILE-CONTENT-BEGIN:docs/05-public-release-risk-map.md:366431c74fb307fc0560ad6a4eeb9de3832c62d4455a16da7781d8c1023e186a
+# 公开仓库法律与公开风险矩阵
+
+> 这是一份发布前的风险分层工具，不是法律意见。它只帮助区分“内容是否敏感”和“是否有权公开/授权”，不能替代对劳动合同、保密协议、适用发布政策或第三方许可的核对。
+
+## 一、风险分层
+
+| 等级 | 内容类型 | 处理方式 |
+| --- | --- | --- |
+| 红色：禁止公开 | 内部链接、账号、密钥、客户资料、真实需求单、投放数据、预算、人员信息、组织代码、后台截图、真实素材 | 从公开仓库删除；不要只打码后继续使用 |
+| 橙色：必须确认 | 工作期间形成的具体文字、特定组织内部文档的独特表达、基于内部资料的流程细节、第三方 Prompt/代码/图片/声音、组织 Logo 与商标 | 获取书面授权或彻底改写为通用方法；没有授权不进入公开分支 |
+| 黄色：建议改写 | 精确模型名称、平台限制、批次编号、内部角色名称、可回溯的项目时间线、未经公开证据支持的成果数字 | 改为工具无关、项目无关的占位表达 |
+| 绿色：可公开 | 通用概念、抽象字段、虚构案例、公开来源链接、对方法的概括性解释 | 保留，但仍应标明许可与适用边界 |
+
+## 二、当前仓库逐文件结论
+
+| 文件 | 内容保密风险 | 权利/归属风险 | 当前处理 |
+| --- | --- | --- | --- |
+| `README.md` | 低 | 低：不包含个人身份和方法来源信息 | 只说明用途、使用方式与适用边界 |
+| `docs/ai-video-request-compiler-v1.md` | 低 | 中：它是公开重写版，不是原始工作文件的原样副本 | 公开分支只保留该版本 |
+| `docs/01-request-brief.md` | 低 | 低：通用字段 | 保留通用占位符 |
+| `docs/02-ai-execution-draft.md` | 低 | 低至中：属于方法模板 | 保留，避免第三方模板逐字复制 |
+| `docs/03-review-and-cost-gates.md` | 低 | 低：不写具体预算或审批人 | 使用组织自定义占位符 |
+| `docs/04-publication-boundary.md` | 低 | 低 | 作为发布前检查清单 |
+| `docs/05-public-release-risk-map.md` | 低 | 低 | 仅作风险分层，不构成法律意见 |
+| `examples/fictional-product-example.md` | 低 | 低：人物、产品、台词均为虚构 | 保留虚构声明 |
+
+## 三、为什么“没有特定组织信息”仍不能自动等于零风险
+
+### 1. 商业秘密风险
+
+公开材料是否构成商业秘密，不能只看有没有特定组织名称，还要看信息是否不为公众所知、具有商业价值，以及权利人是否采取了保密措施。违反保密义务披露、使用或允许他人使用相关信息，可能产生风险。参见[《反不正当竞争法》第十条](https://www.npc.gov.cn/npc/c2/c30834/202506/t20250627_446247.html)。
+
+### 2. 职务成果与著作权风险
+
+如果具体文字是在完成单位工作任务时创作，或者合同约定著作权/发表权归单位，公开发布和向社区授予许可可能需要单位确认。参见[《著作权法》第十八条](https://www.npc.gov.cn/c2/c30834/202011/t20201119_308796.html)。
+
+方法思路与具体文字的权利状态需要分别判断。公开版采用工具无关、项目无关的通用重写，不应原样上传来源或权利状态不明的工作文件。
+
+### 3. 保密与竞业约定风险
+
+劳动合同或保密协议可能另行约定商业秘密和与知识产权有关的保密事项。参见[人力资源和社会保障部发布的《劳动合同法》文本](https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/202011/t20201102_394622.html)。
+
+### 4. 个人信息与第三方素材风险
+
+真实姓名、头像、联系人、工号、声音、肖像、未成年人信息、健康/金融信息，以及客户素材、字体、音乐、Logo 和参考视频，都不能因为“只是示例”就直接公开。公开版应使用虚构内容、抽象占位符或明确许可的素材。
+
+## 四、推荐的最低风险公开路径
+
+1. 公开版只放通用重写稿，不放任何特定组织的原始文件。
+2. 不把包含原始文件的本地 Git 分支推到远程。
+3. 不公开特定组织名称、内部项目、平台账号、生产数据和真实案例素材。
+4. README 仅说明这是工具无关的公开方法，不代表任何特定组织或团队。
+5. 许可证只适用于你有权授权的原创内容，不适用于特定组织或第三方材料。
+6. 在外部引用中，将链接标注为“公开方法参考”，不要标成任何组织的“官方规范”或“官方仓库”。
+7. 公开前保留合同/政策核对结果；如果无法确认，先只创建私有仓库或只在本地保存。
+
+## 五、发布前停止条件
+
+出现以下任一情况，就先不要公开推送：
+
+- 发现公开分支仍含真实组织资料、内部链接、截图或交付内容；
+- 无法判断某一段具体文字是否来自特定组织原文或既有工作任务；
+- 需要把第三方素材、代码或模板逐字放入仓库；
+- 不能确认自己有权授予公众复制、修改和再分发许可；
+- 权利人明确禁止对外发布，或合同/保密协议存在相反约定。
+
+FILE-CONTENT-END:docs/05-public-release-risk-map.md:366431c74fb307fc0560ad6a4eeb9de3832c62d4455a16da7781d8c1023e186a
+
+## File 11/16: docs/ai-video-request-compiler-v1.md
+
+FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:8ad180c344fcebfc60861a83922e7fe2ed1963a2eaf075604ba0118ce99bdd42
+# AI 视频需求编译与执行稿生成规范（公开版 V1）
+
+> 本文件是面向社区的工具无关重写版。V1 采用角色中立的表达，保留需求编译、执行时间轴、素材职责、台词锁定和验收门禁等方法，不包含任何特定组织原文、项目事实或内部配置。
+
+## V1 更新重点
+
+- 采用角色中立表达，只描述“需求输入—AI 编译—视频执行”的共同流程。
+- 把已确认、待确认、风险/冲突和不可变内容分开，减少 AI 自行补全。
+- 增加 GitHub 版本链接的读取顺序，兼顾实时更新和固定版本复现。
+- 保留样片门禁、成本/配额检查和最终验收，但不写任何组织的具体数字。
+
+将本文件连同一份已填写的需求输入交给 AI。AI 的职责是编译和检查，不是替需求方做未经确认的创意决定。
+
+## 可直接复制给 AI 的系统说明
+
+```text
+你是 AI 视频需求编译助手，不是未经授权的广告创意补全器。
+
+你的任务是把输入中的文字、图片、视频、UI、台词和产品资料，整理成供后续视频制作执行的《AI 视频执行稿》。
+
+必须遵守：
+1. 不自行增加剧情、人物关系、产品功能、台词、品牌或结果承诺。
+2. 不把“感觉”“高级一点”“有冲击力”等模糊词直接写进执行稿；改为待确认问题。
+3. 正式台词必须逐字保留，不得改写、翻译、润色、删减或补句。
+4. 参考素材必须拆分为“只继承”和“明确不继承”；不能默认全部继承。
+5. 图片主要说明外观、静态状态和构图；视频主要说明动作、运镜、节奏和连续变化；UI 只能证明已经存在的界面结构和文字。
+6. 看不到或无法逐帧读取的素材，必须明确说无法核验，不得假装看过。
+7. 信息不足时标记【待确认】；存在事实、权利、时长或可执行风险时标记【需要确认】。
+8. 在完成时长检查、待确认问题和验收标准前，不要输出“可以直接生成”的结论。
+
+请严格按以下结构输出完整最新版，不要使用“其他不变”“沿用上一版”等残缺引用。
+```
+
+## 输出格式
+
+# 【AI 视频执行需求】
+
+## 1. 需求理解
+
+- 核心目标：
+- 视频用途：
+- 观众最终看到：
+- 已确认事实：
+- 【待确认】：
+- 【需要确认】：
+
+## 2. 制作参数
+
+- 视频时长：
+- 视频数量：
+- 画幅：
+- 成片语言：
+- 口播：
+- 字幕：
+- UI：
+- ending：
+
+## 3. 需求类型判断
+
+从以下类型中选择，并说明依据：
+
+- 复刻：保留明确的结构、动作、镜头或节奏；
+- 人物替换：保持动作/镜头等指定项，只替换人物；
+- 背景替换：保持人物/动作/镜头等指定项，只替换环境；
+- 动作迁移：将动作和镜头逻辑迁移到新人物或新场景；
+- 视觉机制参考：只参考创意机制或视觉效果；
+- 新创：没有需要继承的参考结构。
+
+## 4. 参考素材分析
+
+| 素材 ID | 来源与可读性 | 用途 | 只继承 | 明确不继承 | 权利状态 |
+| --- | --- | --- | --- | --- | --- |
+| REF-01 |  |  |  |  |  |
+
+如果素材不可读取，写明：`无法逐帧分析，只能依据需求方文字描述整理。`
+
+## 5. 人物与场景
+
+### 角色表
+
+| 角色 ID | 身份 | 外貌/服装 | 初始位置 | 必须保持 | 可变化 |
+| --- | --- | --- | --- | --- | --- |
+| R1 |  |  |  |  |  |
+
+### 场景表
+
+| 场景 ID | 地点 | 背景 | 光线 | 空间关系 | 必须保持 |
+| --- | --- | --- | --- | --- | --- |
+| S1 |  |  |  |  |  |
+
+## 6. 视频执行时间轴
+
+按真实时间顺序拆分。每一段只写当前时刻发生的可见动作，不把多个难以同时完成的动作塞进一句话。
+
+### 0-X 秒
+
+- 画面：
+- 人物与位置：
+- 动作：
+- 镜头：景别、机位、运动
+- 声音：环境声、音乐、口播
+- 台词：逐字保留；没有则写“无”
+- UI：是否出现、出现位置和持续时间
+- 继承/排除：
+
+### X-X 秒
+
+- 画面：
+- 人物与位置：
+- 动作：
+- 镜头：
+- 声音：
+- 台词：
+- UI：
+- 继承/排除：
+
+（持续到视频结束。）
+
+## 7. 台词绑定
+
+| 角色 ID | 时间 | 台词原文 | 张嘴者 | 同期动作 | 其他人物状态 |
+| --- | --- | --- | --- | --- | --- |
+| R1 |  |  | R1 |  |  |
+
+检查：台词是否超出时长、说话者是否明确、口型或后期方案是否需要确认。
+
+## 8. UI 展示绑定
+
+如果包含手机、App、网页或界面，必须填写：
+
+- 出现时间：
+- 触发动作：
+- 展示设备：
+- 屏幕内容：
+- 停留时间：
+- UI 来源：
+- 禁止新增的文字/按钮/功能：
+
+## 9. 时长可执行检查
+
+| 内容 | 预计占用时间 | 依据 | 风险 |
+| --- | ---: | --- | --- |
+| 口播 |  |  |  |
+| 人物动作 |  |  |  |
+| 人物反应 |  |  |  |
+| 镜头变化 |  |  |  |
+| UI 展示 |  |  |  |
+
+- 目标总时长：
+- 预计总需求：
+- 判断：可执行 / 不可执行 / 待确认
+
+不可执行时，只能提出调整选项，不得擅自删改正式台词或核心剧情：
+
+1. 延长时长；
+2. 减少非核心动作；
+3. 拆分为多条视频；
+4. 独立处理音频或口型；
+5. 将 UI 或文字交给后期处理。
+
+## 10. 生成前风险清单
+
+- [ ] 需求事实完整
+- [ ] 台词已锁定
+- [ ] 参考素材职责清晰
+- [ ] 人物、动作、镜头和场景不冲突
+- [ ] 产品功能和 UI 没有未经确认的新增内容
+- [ ] 版权/肖像/声音/音乐/字体权利状态明确
+- [ ] 时长可执行
+- [ ] 生成数量与预算/配额已由负责人确认
+
+## 11. 最终验收标准
+
+### 必须看到
+
+-
+
+### 必须完成
+
+-
+
+### 必须保持
+
+-
+
+### 禁止出现
+
+-
+
+## 12. 最终结论
+
+- 当前状态：可进入样片验证 / 需补充信息 / 不可执行
+- 开工前必须确认：
+- 建议先验证的最小样片：
+- 仍然不能由 AI 自行决定的内容：
+
+## 13. 当规范通过 GitHub 链接提供
+
+如果用户提供的是 GitHub 仓库链接：
+
+1. 先读取仓库 README，确认项目用途、版本、许可和公开边界。
+2. 完整读取 README 指向的 `llms-full.txt`，核对首尾清单 ID、源文件数量和逐文件结束标记。
+3. 按 README 格式返回【仓库读取回执】；校验失败时停止执行。
+4. 再读取用户指定的版本文件；如果只给仓库根链接，默认读取 README 中标记的当前版本。
+5. 优先使用固定版本标签或 commit 进行生产复现；只有用户明确要求最新规则时才读取 `main`。
+6. 如果无法联网、无法读取仓库或页面内容不完整，明确说明并要求用户上传 Markdown，不得假装已经读取。
+7. 规范文件只负责约束需求编译，不替代用户提供的具体需求、产品事实和授权信息。
+FILE-CONTENT-END:docs/ai-video-request-compiler-v1.md:8ad180c344fcebfc60861a83922e7fe2ed1963a2eaf075604ba0118ce99bdd42
+
+## File 12/16: examples/fictional-product-example.md
+
+FILE-CONTENT-BEGIN:examples/fictional-product-example.md:d756f3492cda8b030cdcaf23510bcf6971f08c34d056d1010221fe942a5c13b9
+# 虚构示例：15 秒产品演示视频
+
+> 本示例中的产品、人物、台词和画面均为虚构，只用于展示填写方式。
+
+## 原始需求简报
+
+- 产品：虚构的时间管理 App「TempoNote」
+- 用途：社交媒体竖屏广告
+- 数量：先验证 1 条
+- 时长：15 秒
+- 画幅：9:16
+- 语言：中文
+- 台词：`把今天最重要的一件事，留给真正重要的事。`
+- 参考素材：一段只用于参考“手机从桌面被拿起”的动作视频
+- 不继承：原人物、原背景、原字幕、原 Logo、原音乐
+
+## 编译后的执行稿摘要
+
+### 0-3 秒
+
+- 画面：桌面上只有一部手机和一张便签，手机屏幕朝上。
+- 动作：R1 从画面右侧伸手拿起手机。
+- 镜头：固定中近景，轻微推进。
+- 台词：无。
+- UI：不出现。
+
+### 3-8 秒
+
+- 画面：手机停在胸口高度，屏幕朝向镜头但不遮挡人物脸部。
+- 动作：R1 点击 TempoNote 中的“今日重点”入口。
+- 镜头：切至手机和手部的近景。
+- 台词：无。
+- UI：只展示已经提供的虚构 UI 素材；不得新增按钮或数字。
+
+### 8-13 秒
+
+- 画面：R1 放下手机，回到桌面前开始书写。
+- 镜头：回到中近景，动作连贯。
+- 台词：由 R1 逐字说出：`把今天最重要的一件事，留给真正重要的事。`
+- UI：不出现。
+
+### 13-15 秒
+
+- 画面：虚构产品名和 CTA 出现在纯色结尾卡。
+- 台词：无。
+- 验收：台词完整；手机不漂浮、不穿手；结尾卡无真实品牌和未经确认的功能承诺。
+
+## 这个例子体现的规则
+
+1. 参考视频只承担动作参考，不自动带入原人物和品牌。
+2. 台词单独锁定，不让 AI 顺手润色。
+3. 手机 UI 被绑定到具体时间段和设备状态。
+4. 15 秒内的动作、口播和收尾被拆成可检查的时间轴。
+5. 先做 1 条样片验证，再决定是否扩展数量。
+
+FILE-CONTENT-END:examples/fictional-product-example.md:d756f3492cda8b030cdcaf23510bcf6971f08c34d056d1010221fe942a5c13b9
+
+## File 13/16: LICENSE.md
+
+FILE-CONTENT-BEGIN:LICENSE.md:a8bbcc7d91fa0d3a71521af867c52bbcbe0c3935b14aefbf5b964fa53e4881de
+# 许可说明
+
+除另有说明外，本仓库中可依法授权的原创文字、模板和虚构示例，采用 [Creative Commons Attribution 4.0 International（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/) 许可。
+
+署名建议：`《AI 视频需求编译与执行规范》— https://github.com/null287/ai-video-request-compiler`。
+
+本许可不授予任何特定组织、第三方创作者或素材权利人的内容，也不授予商标、Logo、真实人物肖像、音乐、字体、视频、图片、客户资料、内部文件或其他权利状态不明的内容。发现权利归属不明时，应以权利人的书面许可和适用法律为准。
+
+提交者应在公开内容前核对相关协议、发布政策和第三方素材许可；如果不能确认有权公开，应先删除相关内容或暂不发布。
+FILE-CONTENT-END:LICENSE.md:a8bbcc7d91fa0d3a71521af867c52bbcbe0c3935b14aefbf5b964fa53e4881de
+
+## File 14/16: llms.txt
+
+FILE-CONTENT-BEGIN:llms.txt:6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232ef85192a67
+# AI Video Request Compiler
+
+> A tool-agnostic method for compiling an AI-video request into an executable, reviewable production brief.
+
+## Start here
+
+- [Complete repository context](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt): Read this entire file first and verify its begin/end manifest ID.
+- [AI execution entrypoint](https://github.com/null287/ai-video-request-compiler/blob/main/AI-ENTRYPOINT.md)
+- [Stable V1 specification](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md)
+- [Request input template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/01-request-brief.md)
+- [Execution draft template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/02-ai-execution-draft.md)
+
+Read the complete repository context first. Return the read receipt defined in README before processing the request. Use the repository as rules and the user's accompanying request as input. If no request is supplied, ask for it. Never invent missing project facts.
+FILE-CONTENT-END:llms.txt:6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232ef85192a67
+
+## File 15/16: README.md
+
+FILE-CONTENT-BEGIN:README.md:0fb748aa7e982cbc76eeedabd01e09728718985f866ec2c9dc7c692fe680621b
+# AI 视频需求编译与执行规范
+
+把自然语言里的创意想法，编译成生成模型和制作人员都能执行、验收、复盘的 AI 视频任务。
+
+## 项目主页（分享这个链接）
+
+<https://github.com/null287/ai-video-request-compiler>
+
+这是供日常打开、查看说明和分享使用的 GitHub 项目链接。人类使用者只需复制这个链接，无需打开下方的机器读取地址。
+
+## 给 AI：从这里开始
+
+如果你是通过仓库链接访问本项目的 AI，请执行以下流程：
+
+1. 优先完整读取 [`llms-full.txt`](llms-full.txt)，它聚合了仓库的全部公开源文本。
+2. 核对文件开头和末尾的 `REPOSITORY-CONTENT` 标记具有相同清单 ID。
+3. 核对实际出现的 `FILE-CONTENT-END` 数量等于 `SOURCE-FILE-COUNT`。
+4. 读取其中的 `AI-ENTRYPOINT.md` 和核心 V1 规范后，再处理用户需求。
+5. 如果任一检查失败，返回“仓库内容读取不完整”，不要继续编译，也不要假装已经加载规范。
+
+全仓库最新机器读取地址（Raw；人类无需打开）：
+
+<https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt>
+
+AI 在开始处理需求前，应先返回：
+
+```text
+【仓库读取回执】
+清单 ID：
+源文件数量：
+首尾标记：一致 / 不一致
+文件结束标记：完整 / 不完整
+缺失文件：无 / 文件路径
+结论：可以执行 / 仓库内容读取不完整
+```
+
+稳定 V1 机器读取地址（Raw；人类无需打开）：
+
+<https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md>
+
+### 人类使用者只需这样发送
+
+将仓库链接与具体需求放在同一条消息里：
+
+```text
+请读取并遵循这个仓库中的 V1 规范，将下面的内容编译成 AI 视频执行稿。
+仓库：https://github.com/null287/ai-video-request-compiler
+具体需求：粘贴你的需求文本和素材说明
+```
+
+只发送仓库链接而没有具体需求时，AI 应加载规范并询问需要编译的需求，不应凭空生成项目内容。
+
+## 为什么需要这套规范
+
+AI 视频生产中，最昂贵的错误往往不是模型不会生成，而是需求没有说清楚：
+
+- 参考视频只说“照这个做”，却没有说明参考什么；
+- 只写最终效果，没有写动作、镜头和状态变化；
+- 人物、背景、产品、UI 和声音的修改边界混在一起；
+- 台词、动作、UI 展示和目标时长互相冲突；
+- 需求方以为 AI 会自行补全，执行方却无法判断哪些内容已经确定。
+
+这套规范把需求拆成“已确认事实、可优化描述、待确认问题、执行稿、验收标准”五层，减少误解、返工和无效生成。
+
+## 核心观点
+
+> AI 首先应该是需求编译器，而不是未经授权的创意补全器。
+
+AI 可以整理、拆解、提醒缺失字段、检查执行风险并输出制作规格；不能自行创造未确认的剧情、产品功能、人物关系或台词。
+
+## 快速使用
+
+1. 使用 [`docs/01-request-brief.md`](docs/01-request-brief.md) 填写原始需求。
+2. 将需求和核心规范 [`docs/ai-video-request-compiler-v1.md`](docs/ai-video-request-compiler-v1.md) 一起交给 AI。
+3. 先核对 `已确认`、`待确认` 和 `风险/冲突`，未确认内容不得被 AI 写成确定事实。
+4. 以 AI 输出的执行稿为当前制作依据，而不是以零散聊天记录为依据。
+5. 先生成最小验证样片，再根据明确审核结论决定是否扩量。
+6. 用 [`docs/03-review-and-cost-gates.md`](docs/03-review-and-cost-gates.md) 做时长、质量、预算和交付检查。
+
+## 文件结构
+
+| 文件 | 用途 |
+| --- | --- |
+| `AI-ENTRYPOINT.md` | AI 从仓库根链接进入时的单一执行入口 |
+| `AGENTS.md` | 支持仓库级指令的 Agent 入口 |
+| `llms.txt` | 面向网页读取工具的机器可读索引 |
+| `llms-full.txt` | 聚合全部公开源文本的单文件上下文包 |
+| `content-manifest.json` | 逐文件路径、行数、字节数和 SHA-256 清单 |
+| `SHA256SUMS` | 源文件与生成文件的校验值 |
+| `scripts/build-content-bundle.mjs` | 生成并验证全量文本包 |
+| `docs/ai-video-request-compiler-v1.md` | 核心 AI 需求编译与执行稿规范（公开版 V1） |
+| `docs/01-request-brief.md` | 需求方提交模板 |
+| `docs/02-ai-execution-draft.md` | AI 需求编译与执行稿模板 |
+| `docs/03-review-and-cost-gates.md` | 时长、审核、成本和验收门禁 |
+| `docs/04-publication-boundary.md` | 公开发布与脱敏检查 |
+| `docs/05-public-release-risk-map.md` | 逐文件法律与公开风险矩阵 |
+| `LICENSE.md` | 原创内容的署名许可与权利边界 |
+| `examples/fictional-product-example.md` | 完全虚构的使用示例 |
+
+## 适用范围与边界
+
+本项目是工具无关的公开方法论，不是任何特定组织、客户或平台的官方 SOP。具体模型、参数、平台限制、版权政策和预算规则，应由使用者根据自己的组织环境另行确认。
+
+本仓库不包含：
+
+- 特定组织名称、项目代号、内部链接、账号、人员信息和交付记录；
+- 客户 brief、真实台词、内部 Prompt、投放数据和预算数字；
+- 组织代码、内部系统截图、未获授权的 Logo、音乐、字体、视频或图片；
+- 任何可用于推断特定企业生产策略的未公开细节。
+
+## 许可说明
+
+公开版中可依法授权的原创内容采用 CC BY 4.0，便于社区复用、改写和深化研究；许可边界见 [`LICENSE.md`](LICENSE.md)。该许可不覆盖特定组织材料、第三方内容或权利归属不明的素材。
+
+## 贡献方式
+
+欢迎提交：字段改进、冲突案例、工具无关的模板优化、可复现的虚构示例和不同团队的适配经验。请勿提交特定组织资料、个人信息、客户素材、内部链接、密钥或未经授权的第三方内容。
+FILE-CONTENT-END:README.md:0fb748aa7e982cbc76eeedabd01e09728718985f866ec2c9dc7c692fe680621b
+
+## File 16/16: scripts/build-content-bundle.mjs
+
+FILE-CONTENT-BEGIN:scripts/build-content-bundle.mjs:785b83e6158412e975ad48a7cc65cc735b3b41dbf18b80c61c5366f49f0abf16
+import { createHash } from "node:crypto";
+import { promises as fs } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
+const repositoryRoot = path.resolve(scriptDirectory, "..");
+const generatedFiles = new Set([
+  "SHA256SUMS",
+  "content-manifest.json",
+  "llms-full.txt",
+]);
+const excludedDirectories = new Set([".git", "node_modules"]);
+const checkOnly = process.argv.includes("--check");
+
+function sha256(bytes) {
+  return createHash("sha256").update(bytes).digest("hex");
+}
+
+function normalizeText(text) {
+  return text.replace(/\r\n?/g, "\n");
+}
+
+function lineCount(text) {
+  if (text.length === 0) return 0;
+  const newlineCount = (text.match(/\n/g) ?? []).length;
+  return newlineCount + (text.endsWith("\n") ? 0 : 1);
+}
+
+async function walk(directory) {
+  const entries = await fs.readdir(directory, { withFileTypes: true });
+  entries.sort((a, b) => a.name.localeCompare(b.name, "en"));
+
+  const files = [];
+  for (const entry of entries) {
+    if (entry.isDirectory() && excludedDirectories.has(entry.name)) continue;
+
+    const absolutePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...(await walk(absolutePath)));
+      continue;
+    }
+    if (!entry.isFile()) continue;
+
+    const relativePath = path
+      .relative(repositoryRoot, absolutePath)
+      .split(path.sep)
+      .join("/");
+    if (!generatedFiles.has(relativePath)) files.push(relativePath);
+  }
+  return files;
+}
+
+function decodeUtf8(buffer, relativePath) {
+  if (buffer.includes(0)) {
+    throw new Error(`Binary content is not supported in the full-text bundle: ${relativePath}`);
+  }
+
+  const text = new TextDecoder("utf-8", { fatal: true }).decode(buffer);
+  return normalizeText(text);
+}
+
+async function collectSourceFiles() {
+  const paths = await walk(repositoryRoot);
+  const files = [];
+
+  for (const relativePath of paths) {
+    const buffer = await fs.readFile(path.join(repositoryRoot, relativePath));
+    const content = decodeUtf8(buffer, relativePath);
+    const canonicalBytes = Buffer.from(content, "utf8");
+    files.push({
+      path: relativePath,
+      sha256: sha256(canonicalBytes),
+      bytes: canonicalBytes.length,
+      lines: lineCount(content),
+      content,
+    });
+  }
+  return files;
+}
+
+function buildOutputs(files) {
+  const manifestCore = {
+    schema_version: 1,
+    canonicalization: "UTF-8 text with CRLF and CR normalized to LF",
+    source_file_count: files.length,
+    files: files.map(({ path: filePath, sha256: hash, bytes, lines }) => ({
+      path: filePath,
+      sha256: hash,
+      bytes,
+      lines,
+    })),
+  };
+  const manifestId = sha256(Buffer.from(JSON.stringify(manifestCore), "utf8"));
+  const manifest = {
+    ...manifestCore,
+    manifest_id: manifestId,
+    bundle: "llms-full.txt",
+    checksum_file: "SHA256SUMS",
+  };
+  const manifestText = `${JSON.stringify(manifest, null, 2)}\n`;
+
+  const bundleParts = [
+    "# AI Video Request Compiler — Full Repository Context\n",
+    "This file contains every canonical public source file in the repository.\n",
+    `REPOSITORY-CONTENT-BEGIN:${manifestId}\n`,
+    `SOURCE-FILE-COUNT:${files.length}\n`,
+    "\n## Content manifest\n\n",
+    "```json\n",
+    manifestText,
+    "```\n",
+  ];
+
+  files.forEach((file, index) => {
+    bundleParts.push(
+      `\n## File ${index + 1}/${files.length}: ${file.path}\n\n`,
+      `FILE-CONTENT-BEGIN:${file.path}:${file.sha256}\n`,
+      file.content,
+    );
+    if (!file.content.endsWith("\n")) bundleParts.push("\n");
+    bundleParts.push(`FILE-CONTENT-END:${file.path}:${file.sha256}\n`);
+  });
+
+  bundleParts.push(`\nREPOSITORY-CONTENT-END:${manifestId}\n`);
+  const bundleText = bundleParts.join("");
+
+  const checksums = [
+    ...files.map(({ path: filePath, sha256: hash }) => ({ path: filePath, sha256: hash })),
+    { path: "content-manifest.json", sha256: sha256(Buffer.from(manifestText, "utf8")) },
+    { path: "llms-full.txt", sha256: sha256(Buffer.from(bundleText, "utf8")) },
+  ]
+    .sort((a, b) => a.path.localeCompare(b.path, "en"))
+    .map((item) => `${item.sha256}  ${item.path}`)
+    .join("\n");
+
+  return {
+    "SHA256SUMS": `${checksums}\n`,
+    "content-manifest.json": manifestText,
+    "llms-full.txt": bundleText,
+  };
+}
+
+async function verifyOutputs(outputs) {
+  let valid = true;
+  for (const [relativePath, expected] of Object.entries(outputs)) {
+    let actual;
+    try {
+      actual = normalizeText(await fs.readFile(path.join(repositoryRoot, relativePath), "utf8"));
+    } catch {
+      console.error(`Missing generated file: ${relativePath}`);
+      valid = false;
+      continue;
+    }
+    if (actual !== expected) {
+      console.error(`Generated file is stale: ${relativePath}`);
+      valid = false;
+    }
+  }
+  if (!valid) process.exitCode = 1;
+}
+
+async function writeOutputs(outputs) {
+  for (const [relativePath, content] of Object.entries(outputs)) {
+    await fs.writeFile(path.join(repositoryRoot, relativePath), content, "utf8");
+  }
+}
+
+const files = await collectSourceFiles();
+const outputs = buildOutputs(files);
+
+if (checkOnly) {
+  await verifyOutputs(outputs);
+} else {
+  await writeOutputs(outputs);
+  console.log(`Generated full repository context for ${files.length} source files.`);
+}
+FILE-CONTENT-END:scripts/build-content-bundle.mjs:785b83e6158412e975ad48a7cc65cc735b3b41dbf18b80c61c5366f49f0abf16
+
+REPOSITORY-CONTENT-END:a5a80f2db9a7a040cd9da908a4f4ecf7157ec8813acb6e5f8658d3ff19438db5
