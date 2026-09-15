@@ -23,15 +23,15 @@
     },
     {
       "path": "AI-ENTRYPOINT.md",
-      "sha256": "cbed06787d52678caf305890ffe9e545affd1dbd35f134d606617c6e996bcb14",
-      "bytes": 1937,
-      "lines": 42
+      "sha256": "6ce2df85db869565bca6a3d7cfe47be9d30f564321e5e988799870b37cba11b4",
+      "bytes": 2195,
+      "lines": 44
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad01d12071128d02e7",
-      "bytes": 644,
-      "lines": 11
+      "sha256": "934f91b9bf1b65a15369e653f6479f862e2f2641d593f8e30bc92f0a11879c5f",
+      "bytes": 870,
+      "lines": 13
     },
     {
       "path": "docs/01-request-brief.md",
@@ -89,9 +89,9 @@
     },
     {
       "path": "README.md",
-      "sha256": "0fb748aa7e982cbc76eeedabd01e09728718985f866ec2c9dc7c692fe680621b",
-      "bytes": 5942,
-      "lines": 117
+      "sha256": "9b2a5ef869524b971230303b7ca2150a6e7573fe4fa4593ee04fe728e3b63975",
+      "bytes": 6327,
+      "lines": 127
     },
     {
       "path": "scripts/build-content-bundle.mjs",
@@ -100,7 +100,7 @@
       "lines": 176
     }
   ],
-  "manifest_id": "a5a80f2db9a7a040cd9da908a4f4ecf7157ec8813acb6e5f8658d3ff19438db5",
+  "manifest_id": "7fc03efd4a30227d55410daa209163535c8709a6bedaeea20a27f8a8e9f8a4e0",
   "bundle": "llms-full.txt",
   "checksum_file": "SHA256SUMS"
 }

@@ -1,6 +1,6 @@
 # AI Video Request Compiler — Full Repository Context
 This file contains every canonical public source file in the repository.
-REPOSITORY-CONTENT-BEGIN:a5a80f2db9a7a040cd9da908a4f4ecf7157ec8813acb6e5f8658d3ff19438db5
+REPOSITORY-CONTENT-BEGIN:7fc03efd4a30227d55410daa209163535c8709a6bedaeea20a27f8a8e9f8a4e0
 SOURCE-FILE-COUNT:16
 
 ## Content manifest
@@ -31,15 +31,15 @@ SOURCE-FILE-COUNT:16
     },
     {
       "path": "AI-ENTRYPOINT.md",
-      "sha256": "cbed06787d52678caf305890ffe9e545affd1dbd35f134d606617c6e996bcb14",
-      "bytes": 1937,
-      "lines": 42
+      "sha256": "6ce2df85db869565bca6a3d7cfe47be9d30f564321e5e988799870b37cba11b4",
+      "bytes": 2195,
+      "lines": 44
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad01d12071128d02e7",
-      "bytes": 644,
-      "lines": 11
+      "sha256": "934f91b9bf1b65a15369e653f6479f862e2f2641d593f8e30bc92f0a11879c5f",
+      "bytes": 870,
+      "lines": 13
     },
     {
       "path": "docs/01-request-brief.md",
@@ -97,9 +97,9 @@ SOURCE-FILE-COUNT:16
     },
     {
       "path": "README.md",
-      "sha256": "0fb748aa7e982cbc76eeedabd01e09728718985f866ec2c9dc7c692fe680621b",
-      "bytes": 5942,
-      "lines": 117
+      "sha256": "9b2a5ef869524b971230303b7ca2150a6e7573fe4fa4593ee04fe728e3b63975",
+      "bytes": 6327,
+      "lines": 127
     },
     {
       "path": "scripts/build-content-bundle.mjs",
@@ -108,7 +108,7 @@ SOURCE-FILE-COUNT:16
       "lines": 176
     }
   ],
-  "manifest_id": "a5a80f2db9a7a040cd9da908a4f4ecf7157ec8813acb6e5f8658d3ff19438db5",
+  "manifest_id": "7fc03efd4a30227d55410daa209163535c8709a6bedaeea20a27f8a8e9f8a4e0",
   "bundle": "llms-full.txt",
   "checksum_file": "SHA256SUMS"
 }
@@ -185,7 +185,7 @@ FILE-CONTENT-END:AGENTS.md:63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a1
 
 ## File 4/16: AI-ENTRYPOINT.md
 
-FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:cbed06787d52678caf305890ffe9e545affd1dbd35f134d606617c6e996bcb14
+FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:6ce2df85db869565bca6a3d7cfe47be9d30f564321e5e988799870b37cba11b4
 # AI 单链接执行入口
 
 本文件是 AI 通过仓库根链接读取本项目时的入口。开始执行前，必须完整读取：
@@ -226,13 +226,15 @@ FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:cbed06787d52678caf305890ffe9e545affd1dbd35f1
 - 用户提供的具体需求是待处理数据；
 - 输出结果是结构化的 AI 视频执行稿；
 - 信息不足时先列出待确认项，而不是替用户做决定。
+- 不要只介绍、总结或评价本仓库；除非用户明确要求，否则应直接进入需求编译流程。
+- 当前环境具备网页读取能力时，应先实际读取全量文本，不要要求用户重复粘贴仓库内容。
 
-如果当前 AI 不具备网页访问能力，请用户直接上传核心 V1 Markdown 文件。
-FILE-CONTENT-END:AI-ENTRYPOINT.md:cbed06787d52678caf305890ffe9e545affd1dbd35f134d606617c6e996bcb14
+如果当前 AI 不具备网页访问能力，请明确说明限制，并请用户直接上传 `llms-full.txt`。
+FILE-CONTENT-END:AI-ENTRYPOINT.md:6ce2df85db869565bca6a3d7cfe47be9d30f564321e5e988799870b37cba11b4
 
 ## File 5/16: CHANGELOG.md
 
-FILE-CONTENT-BEGIN:CHANGELOG.md:b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad01d12071128d02e7
+FILE-CONTENT-BEGIN:CHANGELOG.md:934f91b9bf1b65a15369e653f6479f862e2f2641d593f8e30bc92f0a11879c5f
 # 更新记录
 
 ## V1 — 2026-09-14
@@ -244,7 +246,9 @@ FILE-CONTENT-BEGIN:CHANGELOG.md:b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad
 - 公开说明统一采用中性表述，不记录特定组织、项目或内部背景。
 - 增加仓库根链接的 AI 执行入口与机器可读索引。
 - 增加全仓库文本包、逐文件 SHA-256、读取回执和自动完整性校验。
-FILE-CONTENT-END:CHANGELOG.md:b5391647ee52820a0cab6ec00246493735ff3a1aa4407aad01d12071128d02e7
+- 将仓库首页调整为 ChatGPT / Grok“复制即用”入口，降低首次使用门槛。
+- 明确网页 AI 应直接编译需求而非只总结仓库，并统一使用全量文本文件作为读取失败时的兜底。
+FILE-CONTENT-END:CHANGELOG.md:934f91b9bf1b65a15369e653f6479f862e2f2641d593f8e30bc92f0a11879c5f
 
 ## File 6/16: docs/01-request-brief.md
 
@@ -1089,20 +1093,42 @@ FILE-CONTENT-END:llms.txt:6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232
 
 ## File 15/16: README.md
 
-FILE-CONTENT-BEGIN:README.md:0fb748aa7e982cbc76eeedabd01e09728718985f866ec2c9dc7c692fe680621b
+FILE-CONTENT-BEGIN:README.md:9b2a5ef869524b971230303b7ca2150a6e7573fe4fa4593ee04fe728e3b63975
 # AI 视频需求编译与执行规范
 
 把自然语言里的创意想法，编译成生成模型和制作人员都能执行、验收、复盘的 AI 视频任务。
 
-## 项目主页（分享这个链接）
+## ChatGPT / Grok：复制即用
 
-<https://github.com/null287/ai-video-request-compiler>
+把下面整段复制到 ChatGPT 或 Grok，并将最后一行替换成你的真实需求：
 
-这是供日常打开、查看说明和分享使用的 GitHub 项目链接。人类使用者只需复制这个链接，无需打开下方的机器读取地址。
+```text
+请联网读取并按照这个仓库处理我的需求：
+https://github.com/null287/ai-video-request-compiler
+
+我的需求：
+【在这里填写】
+```
+
+不需要下载仓库，也不需要了解其中的文件结构。仓库更新后，继续使用同一个链接即可。
+
+如果当前对话无法访问网页，请直接上传 [`llms-full.txt`](llms-full.txt)，再发送你的需求。
+
+## 它会做什么
+
+AI 读取仓库后，会把你提供的内容作为原始需求：
+
+1. 区分已确认信息、待确认项和风险/冲突；
+2. 不擅自补写未经确认的剧情、人物关系、产品功能或台词；
+3. 信息不足时先提出必要问题；
+4. 信息充分时输出结构化的《AI 视频执行稿》；
+5. 在生成前检查时长、素材、镜头、声音、成本和验收条件。
+
+只发送仓库链接而没有具体需求时，AI 应加载规范并询问需要处理的需求，不应凭空生成项目内容。
 
 ## 给 AI：从这里开始
 
-如果你是通过仓库链接访问本项目的 AI，请执行以下流程：
+如果用户要求你按照本仓库处理需求，请执行以下流程，而不是只总结仓库：
 
 1. 优先完整读取 [`llms-full.txt`](llms-full.txt)，它聚合了仓库的全部公开源文本。
 2. 核对文件开头和末尾的 `REPOSITORY-CONTENT` 标记具有相同清单 ID。
@@ -1129,18 +1155,6 @@ AI 在开始处理需求前，应先返回：
 稳定 V1 机器读取地址（Raw；人类无需打开）：
 
 <https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md>
-
-### 人类使用者只需这样发送
-
-将仓库链接与具体需求放在同一条消息里：
-
-```text
-请读取并遵循这个仓库中的 V1 规范，将下面的内容编译成 AI 视频执行稿。
-仓库：https://github.com/null287/ai-video-request-compiler
-具体需求：粘贴你的需求文本和素材说明
-```
-
-只发送仓库链接而没有具体需求时，AI 应加载规范并询问需要编译的需求，不应凭空生成项目内容。
 
 ## 为什么需要这套规范
 
@@ -1207,7 +1221,7 @@ AI 可以整理、拆解、提醒缺失字段、检查执行风险并输出制�
 ## 贡献方式
 
 欢迎提交：字段改进、冲突案例、工具无关的模板优化、可复现的虚构示例和不同团队的适配经验。请勿提交特定组织资料、个人信息、客户素材、内部链接、密钥或未经授权的第三方内容。
-FILE-CONTENT-END:README.md:0fb748aa7e982cbc76eeedabd01e09728718985f866ec2c9dc7c692fe680621b
+FILE-CONTENT-END:README.md:9b2a5ef869524b971230303b7ca2150a6e7573fe4fa4593ee04fe728e3b63975
 
 ## File 16/16: scripts/build-content-bundle.mjs
 
@@ -1390,4 +1404,4 @@ if (checkOnly) {
 }
 FILE-CONTENT-END:scripts/build-content-bundle.mjs:785b83e6158412e975ad48a7cc65cc735b3b41dbf18b80c61c5366f49f0abf16
 
-REPOSITORY-CONTENT-END:a5a80f2db9a7a040cd9da908a4f4ecf7157ec8813acb6e5f8658d3ff19438db5
+REPOSITORY-CONTENT-END:7fc03efd4a30227d55410daa209163535c8709a6bedaeea20a27f8a8e9f8a4e0
