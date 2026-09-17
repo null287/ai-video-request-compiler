@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "canonicalization": "UTF-8 text with CRLF and CR normalized to LF",
-  "source_file_count": 16,
+  "source_file_count": 17,
   "files": [
     {
       "path": ".github/workflows/verify-content-integrity.yml",
-      "sha256": "a4109e9605ef18e52682fed3feea95b552013f4dcf7b0da963b7763f8aa969bc",
-      "bytes": 432,
-      "lines": 21
+      "sha256": "e44af3ca2c898d0e7983b4cc61de9d6e29852afdf46ffe5cf1f6b043e33d450a",
+      "bytes": 544,
+      "lines": 24
     },
     {
       "path": ".gitignore",
@@ -23,15 +23,15 @@
     },
     {
       "path": "AI-ENTRYPOINT.md",
-      "sha256": "6ce2df85db869565bca6a3d7cfe47be9d30f564321e5e988799870b37cba11b4",
-      "bytes": 2195,
-      "lines": 44
+      "sha256": "8119e365af41661e6d58259684de0426aedf162eed426c80e9dc52f86c5730da",
+      "bytes": 2610,
+      "lines": 45
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "934f91b9bf1b65a15369e653f6479f862e2f2641d593f8e30bc92f0a11879c5f",
-      "bytes": 870,
-      "lines": 13
+      "sha256": "79b4aafd09c807b401446e312b985c82b608d4900301a13c49a2aef6e7c41914",
+      "bytes": 1212,
+      "lines": 16
     },
     {
       "path": "docs/01-request-brief.md",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/ai-video-request-compiler-v1.md",
-      "sha256": "8ad180c344fcebfc60861a83922e7fe2ed1963a2eaf075604ba0118ce99bdd42",
-      "bytes": 6788,
-      "lines": 207
+      "sha256": "95625b878d2735d29926b4e39ddf74d66f2089d1f1e8a2b8cb511f05f973871c",
+      "bytes": 6783,
+      "lines": 206
     },
     {
       "path": "examples/fictional-product-example.md",
@@ -89,18 +89,24 @@
     },
     {
       "path": "README.md",
-      "sha256": "9b2a5ef869524b971230303b7ca2150a6e7573fe4fa4593ee04fe728e3b63975",
-      "bytes": 6327,
-      "lines": 127
+      "sha256": "92a6affeeae75f6a7bf8eb99096f83be08ddb1514b6e6984d92b690a85edffc6",
+      "bytes": 9458,
+      "lines": 197
     },
     {
       "path": "scripts/build-content-bundle.mjs",
       "sha256": "785b83e6158412e975ad48a7cc65cc735b3b41dbf18b80c61c5366f49f0abf16",
       "bytes": 5321,
       "lines": 176
+    },
+    {
+      "path": "scripts/verify-web-chat-entry.mjs",
+      "sha256": "a53284d0de52987cc70536075467a909d6f485004e75aa7f19abfb489762a3bb",
+      "bytes": 2030,
+      "lines": 69
     }
   ],
-  "manifest_id": "7fc03efd4a30227d55410daa209163535c8709a6bedaeea20a27f8a8e9f8a4e0",
+  "manifest_id": "20cad239999bb4ad74956be161a82ecf8f1be6a9762d0bbf91d098fb47149792",
   "bundle": "llms-full.txt",
   "checksum_file": "SHA256SUMS"
 }

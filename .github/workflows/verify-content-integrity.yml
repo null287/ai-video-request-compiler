@@ -19,3 +19,6 @@ jobs:
 
       - name: Verify full-context bundle and checksums
         run: node scripts/build-content-bundle.mjs --check
+
+      - name: Verify self-contained ChatGPT and Grok entry
+        run: node scripts/verify-web-chat-entry.mjs
