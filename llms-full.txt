@@ -1,6 +1,6 @@
 # AI Video Request Compiler — Full Repository Context
 This file contains every canonical public source file in the repository.
-REPOSITORY-CONTENT-BEGIN:20cad239999bb4ad74956be161a82ecf8f1be6a9762d0bbf91d098fb47149792
+REPOSITORY-CONTENT-BEGIN:781296e019e7e0505920f9752e2c4a7ab61446c75272053c3122f2adc3b11aa8
 SOURCE-FILE-COUNT:17
 
 ## Content manifest
@@ -37,9 +37,9 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "79b4aafd09c807b401446e312b985c82b608d4900301a13c49a2aef6e7c41914",
-      "bytes": 1212,
-      "lines": 16
+      "sha256": "66bd25bbf23c80bcc2586fefe79584f9525f5ac67b27eb4b8cd0f0391a15e2a8",
+      "bytes": 1698,
+      "lines": 23
     },
     {
       "path": "docs/01-request-brief.md",
@@ -73,9 +73,9 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "docs/ai-video-request-compiler-v1.md",
-      "sha256": "95625b878d2735d29926b4e39ddf74d66f2089d1f1e8a2b8cb511f05f973871c",
-      "bytes": 6783,
-      "lines": 206
+      "sha256": "e669ff4a13958d466c3b6f2a312615a37013df5805b290dd0e1badb84a59c85d",
+      "bytes": 6349,
+      "lines": 155
     },
     {
       "path": "examples/fictional-product-example.md",
@@ -97,9 +97,9 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "README.md",
-      "sha256": "92a6affeeae75f6a7bf8eb99096f83be08ddb1514b6e6984d92b690a85edffc6",
-      "bytes": 9458,
-      "lines": 197
+      "sha256": "ffdb46e524e760a64d44b2a71a38657c1e9226b203db1e9f677f8294bf25b970",
+      "bytes": 9637,
+      "lines": 173
     },
     {
       "path": "scripts/build-content-bundle.mjs",
@@ -109,12 +109,12 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "scripts/verify-web-chat-entry.mjs",
-      "sha256": "a53284d0de52987cc70536075467a909d6f485004e75aa7f19abfb489762a3bb",
-      "bytes": 2030,
-      "lines": 69
+      "sha256": "2a5c35e4c3819918d279bd0fa297ee16d222bd493be2e7356f41fba2baf74ba3",
+      "bytes": 2128,
+      "lines": 74
     }
   ],
-  "manifest_id": "20cad239999bb4ad74956be161a82ecf8f1be6a9762d0bbf91d098fb47149792",
+  "manifest_id": "781296e019e7e0505920f9752e2c4a7ab61446c75272053c3122f2adc3b11aa8",
   "bundle": "llms-full.txt",
   "checksum_file": "SHA256SUMS"
 }
@@ -244,8 +244,15 @@ FILE-CONTENT-END:AI-ENTRYPOINT.md:8119e365af41661e6d58259684de0426aedf162eed426c
 
 ## File 5/17: CHANGELOG.md
 
-FILE-CONTENT-BEGIN:CHANGELOG.md:79b4aafd09c807b401446e312b985c82b608d4900301a13c49a2aef6e7c41914
+FILE-CONTENT-BEGIN:CHANGELOG.md:66bd25bbf23c80bcc2586fefe79584f9525f5ac67b27eb4b8cd0f0391a15e2a8
 # 更新记录
+
+## V1 — 2026-09-20
+
+- 将网页端默认输出从规范化表格改为可直接提交的时间轴执行稿。
+- 固定使用“参考视频、镜头/画面、人物设定、人物动作、台词、字幕、UI/产品、后期”等字段。
+- 用户已经提供时间轴时，要求保留原时间段、字段顺序、台词和链接形式，只做执行化整理。
+- 将时长检查、生成前风险和最终验收标准放到执行稿后，减少使用者阅读和复制成本。
 
 ## V1 — 2026-09-14
 
@@ -261,7 +268,7 @@ FILE-CONTENT-BEGIN:CHANGELOG.md:79b4aafd09c807b401446e312b985c82b608d4900301a13c
 - 根据网页端实测，将 ChatGPT / Grok 入口改为 README 内嵌的自包含 V1 执行协议，不再依赖递归读取仓库文件。
 - 增加网页入口自动验证，防止后续更新重新引入二级文件依赖。
 - 将 `llms-full.txt` 调整为全仓库审计与附件兜底，不再作为普通网页聊天的必经入口。
-FILE-CONTENT-END:CHANGELOG.md:79b4aafd09c807b401446e312b985c82b608d4900301a13c49a2aef6e7c41914
+FILE-CONTENT-END:CHANGELOG.md:66bd25bbf23c80bcc2586fefe79584f9525f5ac67b27eb4b8cd0f0391a15e2a8
 
 ## File 6/17: docs/01-request-brief.md
 
@@ -802,7 +809,7 @@ FILE-CONTENT-END:docs/05-public-release-risk-map.md:366431c74fb307fc0560ad6a4eeb
 
 ## File 11/17: docs/ai-video-request-compiler-v1.md
 
-FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:95625b878d2735d29926b4e39ddf74d66f2089d1f1e8a2b8cb511f05f973871c
+FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:e669ff4a13958d466c3b6f2a312615a37013df5805b290dd0e1badb84a59c85d
 # AI 视频需求编译与执行稿生成规范（公开版 V1）
 
 > 本文件是面向社区的工具无关重写版。V1 采用角色中立的表达，保留需求编译、执行时间轴、素材职责、台词锁定和验收门禁等方法，不包含任何特定组织原文、项目事实或内部配置。
@@ -833,93 +840,42 @@ FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:95625b878d2735d29926b4e3
 7. 信息不足时标记【待确认】；存在事实、权利、时长或可执行风险时标记【需要确认】。
 8. 在完成时长检查、待确认问题和验收标准前，不要输出“可以直接生成”的结论。
 
-请严格按以下结构输出完整最新版，不要使用“其他不变”“沿用上一版”等残缺引用。
+默认先输出可以直接提交给制作人员的时间轴执行稿，不要先输出长篇方法论、分类表或空字段表格。若用户已经给出明确的时间轴，尽量保持用户的时间段、字段顺序、台词和链接形式，只做语病修正、冲突标记和执行化整理。
 ```
 
 ## 输出格式
 
-# 【AI 视频执行需求】
+# 【AI 视频需求执行稿】
 
-## 1. 需求理解
+参考视频：逐条保留用户提供的链接；没有则写“未提供”。
+参考素材说明：只写确实能够读取或由用户明确描述的内容；无法读取时如实说明。
 
-- 核心目标：
-- 视频用途：
-- 观众最终看到：
-- 已确认事实：
-- 【待确认】：
-- 【需要确认】：
+0-X秒
+镜头/画面：写清场景、主体、画面变化和观众看到的结果。
+人物设定：写清人物身份、外观、服装和可随机项；未提供的内容标记【待确认】。
+人物动作：按先后顺序写可执行动作和人物位置关系。
+台词：逐字保留用户原文；没有则写“无”。
+字幕：写明有无字幕和具体文字；没有则写“无”。
+UI/产品：写明出现时间、触发动作、屏幕内容和来源；没有则写“无”。
+后期：写明声音、特效、转场和节奏；未提供的新增效果标记【创意提案】。
+---
+X-X秒
+镜头/画面：
+人物设定：
+人物动作：
+台词：
+字幕：
+UI/产品：
+后期：
+---
+（持续到视频结束）
 
-## 2. 制作参数
-
-- 视频时长：
-- 视频数量：
-- 画幅：
-- 成片语言：
-- 口播：
-- 字幕：
-- UI：
-- ending：
-
-## 3. 需求类型判断
-
-从以下类型中选择，并说明依据：
-
-- 复刻：保留明确的结构、动作、镜头或节奏；
-- 人物替换：保持动作/镜头等指定项，只替换人物；
-- 背景替换：保持人物/动作/镜头等指定项，只替换环境；
-- 动作迁移：将动作和镜头逻辑迁移到新人物或新场景；
-- 视觉机制参考：只参考创意机制或视觉效果；
-- 新创：没有需要继承的参考结构。
-
-## 4. 参考素材分析
-
-| 素材 ID | 来源与可读性 | 用途 | 只继承 | 明确不继承 | 权利状态 |
-| --- | --- | --- | --- | --- | --- |
-| REF-01 |  |  |  |  |  |
-
-如果素材不可读取，写明：`无法逐帧分析，只能依据需求方文字描述整理。`
-
-## 5. 人物与场景
-
-### 角色表
-
-| 角色 ID | 身份 | 外貌/服装 | 初始位置 | 必须保持 | 可变化 |
-| --- | --- | --- | --- | --- | --- |
-| R1 |  |  |  |  |  |
-
-### 场景表
-
-| 场景 ID | 地点 | 背景 | 光线 | 空间关系 | 必须保持 |
-| --- | --- | --- | --- | --- | --- |
-| S1 |  |  |  |  |  |
-
-## 6. 视频执行时间轴
-
-按真实时间顺序拆分。每一段只写当前时刻发生的可见动作，不把多个难以同时完成的动作塞进一句话。
-
-### 0-X 秒
-
-- 画面：
-- 人物与位置：
-- 动作：
-- 镜头：景别、机位、运动
-- 声音：环境声、音乐、口播
-- 台词：逐字保留；没有则写“无”
-- UI：是否出现、出现位置和持续时间
-- 继承/排除：
-
-### X-X 秒
-
-- 画面：
-- 人物与位置：
-- 动作：
-- 镜头：
-- 声音：
-- 台词：
-- UI：
-- 继承/排除：
-
-（持续到视频结束。）
+执行前检查：
+- 已确认：只列用户明确提供的事实。
+- 待确认：只列会影响制作的最少问题。
+- 时长检查：说明台词、动作、镜头和 UI 是否能在目标时长内完成。
+- 验收标准：列出必须看到、必须保持和禁止出现的内容。
+- 当前状态：可进入样片验证 / 需补充信息 / 当前不可执行。
 
 ## 7. 台词绑定
 
@@ -1009,7 +965,7 @@ FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:95625b878d2735d29926b4e3
 4. 生产复现需要固定版本时，使用版本标签或 commit；日常使用仓库根链接读取当前网页协议。
 5. 如果无法联网或页面内容不完整，要求用户上传本 Markdown 文件，不得假装已经读取。
 6. 规范只负责约束需求编译，不替代用户提供的具体需求、产品事实和授权信息。
-FILE-CONTENT-END:docs/ai-video-request-compiler-v1.md:95625b878d2735d29926b4e39ddf74d66f2089d1f1e8a2b8cb511f05f973871c
+FILE-CONTENT-END:docs/ai-video-request-compiler-v1.md:e669ff4a13958d466c3b6f2a312615a37013df5805b290dd0e1badb84a59c85d
 
 ## File 12/17: examples/fictional-product-example.md
 
@@ -1105,7 +1061,7 @@ FILE-CONTENT-END:llms.txt:6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232
 
 ## File 15/17: README.md
 
-FILE-CONTENT-BEGIN:README.md:92a6affeeae75f6a7bf8eb99096f83be08ddb1514b6e6984d92b690a85edffc6
+FILE-CONTENT-BEGIN:README.md:ffdb46e524e760a64d44b2a71a38657c1e9226b203db1e9f677f8294bf25b970
 # AI 视频需求编译与执行规范
 
 把自然语言里的创意想法，编译成生成模型和制作人员都能执行、验收、复盘的 AI 视频任务。
@@ -1155,73 +1111,49 @@ https://github.com/null287/ai-video-request-compiler
 4. 把参考素材的继承边界、时间轴和验收标准写清楚。
 5. 最后判断：可进入样片验证 / 需补充信息 / 当前不可执行。
 
-### 固定输出结构
+### 默认输出格式：直接生成可提交的执行稿
 
-严格按下面结构输出；不适用的字段写“无”或“未提供”，不要删除整个检查层级。
+默认不要先输出长篇方法论、分类表或空字段表格。先把用户需求整理成可以直接提交给制作人员的时间轴执行稿，格式接近下面的结构；不适用的字段写“无”，不要为了凑字段编造内容。
 
 ```text
-# 【AI 视频执行需求】
+# 【AI 视频需求执行稿】
 
-## 1. 需求理解
-- 核心目标
-- 视频用途
-- 观众最终看到
-- 已确认事实
-- 创意提案
-- 待确认
-- 需要确认
+参考视频：逐条保留用户提供的链接；没有则写“未提供”。
+参考素材说明：只写确实能够读取或由用户明确描述的内容；无法读取时如实说明。
 
-## 2. 制作参数
-- 时长、数量、画幅、语言
-- 口播、字幕、UI、ending
+## 视频执行时间轴
 
-## 3. 需求类型
-- 复刻 / 人物替换 / 背景替换 / 动作迁移 / 视觉机制参考 / 新创
-- 判断依据
+0-X秒
+镜头/画面：写清场景、主体、画面变化和观众看到的结果。
+人物设定：写清人物身份、外观、服装和可随机项；未提供的内容标记【待确认】。
+人物动作：按先后顺序写可执行动作和人物位置关系。
+台词：逐字保留用户原文；没有则写“无”。
+字幕：写明有无字幕和具体文字；没有则写“无”。
+UI/产品：写明出现时间、触发动作、屏幕内容和来源；没有则写“无”。
+后期：写明声音、特效、转场和节奏；未提供的新增效果标记【创意提案】。
+---
+X-X秒
+镜头/画面：
+人物设定：
+人物动作：
+台词：
+字幕：
+UI/产品：
+后期：
+---
+（持续到视频结束）
 
-## 4. 参考素材分析
-- 素材 ID、可读性、用途
-- 只继承
-- 明确不继承
-- 权利状态
+## 时长可执行检查、生成前风险与最终验收标准
 
-## 5. 人物与场景
-- 角色、外观、位置、必须保持、可变化
-- 地点、背景、光线、空间关系、必须保持
-
-## 6. 视频执行时间轴
-- 按真实时间分段
-- 每段写：画面、人物与位置、动作、镜头、声音、台词、UI、继承/排除
-
-## 7. 台词与 UI 绑定
-- 台词原文、说话者、时间、同期动作
-- UI 出现时间、触发动作、屏幕内容、停留时间、来源和禁止新增项
-
-## 8. 时长可执行检查
-- 各动作、台词、镜头和 UI 的预计占时
-- 目标总时长、预计总需求
-- 判断：可执行 / 不可执行 / 待确认
-
-## 9. 生成前风险
-- 事实缺失、素材不可读、动作过载、时长冲突
-- 人物/场景连续性、产品/UI 准确性
-- 版权、商标、肖像、声音、音乐、字体及预算/配额状态
-
-## 10. 最小验证样片
-- 首次只验证什么
-- 通过什么标准后才能扩量
-
-## 11. 最终验收标准
-- 必须看到
-- 必须完成
-- 必须保持
-- 禁止出现
-
-## 12. 最终结论
-- 当前状态：可进入样片验证 / 需补充信息 / 当前不可执行
-- 开工前必须确认
-- 仍然不能由 AI 自行决定的内容
+执行前检查：
+- 已确认：只列用户明确提供的事实。
+- 待确认：只列会影响制作的最少问题。
+- 时长检查：说明台词、动作、镜头和 UI 是否能在目标时长内完成。
+- 最终验收标准：列出必须看到、必须保持和禁止出现的内容。
+- 当前状态：可进入样片验证 / 需补充信息 / 当前不可执行。
 ```
+
+如果用户已经给出明确的时间轴，必须尽量保持其时间段、字段顺序、台词和链接形式，只做语病修正、冲突标记和执行化整理，不要改成另一套表格。
 
 ### 无具体需求时
 
@@ -1303,7 +1235,7 @@ AI 可以整理、拆解、提醒缺失字段、检查执行风险并输出制�
 ## 贡献方式
 
 欢迎提交：字段改进、冲突案例、工具无关的模板优化、可复现的虚构示例和不同团队的适配经验。请勿提交特定组织资料、个人信息、客户素材、内部链接、密钥或未经授权的第三方内容。
-FILE-CONTENT-END:README.md:92a6affeeae75f6a7bf8eb99096f83be08ddb1514b6e6984d92b690a85edffc6
+FILE-CONTENT-END:README.md:ffdb46e524e760a64d44b2a71a38657c1e9226b203db1e9f677f8294bf25b970
 
 ## File 16/17: scripts/build-content-bundle.mjs
 
@@ -1488,7 +1420,7 @@ FILE-CONTENT-END:scripts/build-content-bundle.mjs:785b83e6158412e975ad48a7cc65cc
 
 ## File 17/17: scripts/verify-web-chat-entry.mjs
 
-FILE-CONTENT-BEGIN:scripts/verify-web-chat-entry.mjs:a53284d0de52987cc70536075467a909d6f485004e75aa7f19abfb489762a3bb
+FILE-CONTENT-BEGIN:scripts/verify-web-chat-entry.mjs:2a5c35e4c3819918d279bd0fa297ee16d222bd493be2e7356f41fba2baf74ba3
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -1531,6 +1463,11 @@ if (begin >= 0 && end > begin) {
     "生成前风险",
     "最终验收标准",
     "当前状态",
+    "镜头/画面",
+    "人物设定",
+    "人物动作",
+    "后期",
+    "参考视频：",
   ];
 
   for (const phrase of requiredPhrases) {
@@ -1558,6 +1495,6 @@ if (errors.length > 0) {
 } else {
   console.log("Web-chat entry is self-contained and complete.");
 }
-FILE-CONTENT-END:scripts/verify-web-chat-entry.mjs:a53284d0de52987cc70536075467a909d6f485004e75aa7f19abfb489762a3bb
+FILE-CONTENT-END:scripts/verify-web-chat-entry.mjs:2a5c35e4c3819918d279bd0fa297ee16d222bd493be2e7356f41fba2baf74ba3
 
-REPOSITORY-CONTENT-END:20cad239999bb4ad74956be161a82ecf8f1be6a9762d0bbf91d098fb47149792
+REPOSITORY-CONTENT-END:781296e019e7e0505920f9752e2c4a7ab61446c75272053c3122f2adc3b11aa8

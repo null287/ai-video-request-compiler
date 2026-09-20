@@ -40,6 +40,11 @@ if (begin >= 0 && end > begin) {
     "生成前风险",
     "最终验收标准",
     "当前状态",
+    "镜头/画面",
+    "人物设定",
+    "人物动作",
+    "后期",
+    "参考视频：",
   ];
 
   for (const phrase of requiredPhrases) {
