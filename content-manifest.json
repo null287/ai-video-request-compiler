@@ -29,9 +29,9 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "66bd25bbf23c80bcc2586fefe79584f9525f5ac67b27eb4b8cd0f0391a15e2a8",
-      "bytes": 1698,
-      "lines": 23
+      "sha256": "888a09f900bf69be428cd4cca49f951dfe38f3c88c3a3a7acc6b1af9d23e77ff",
+      "bytes": 2592,
+      "lines": 32
     },
     {
       "path": "docs/01-request-brief.md",
@@ -41,9 +41,9 @@
     },
     {
       "path": "docs/02-ai-execution-draft.md",
-      "sha256": "35f6c4e724703ec1b5b656439fca056a7c84477232c50fcc64f02d6a3488360a",
-      "bytes": 5224,
-      "lines": 186
+      "sha256": "b0b4538fe0412ac2681d10035852f05e37846c831db07c5f7d6c5787adb70ea8",
+      "bytes": 3461,
+      "lines": 45
     },
     {
       "path": "docs/03-review-and-cost-gates.md",
@@ -65,15 +65,15 @@
     },
     {
       "path": "docs/ai-video-request-compiler-v1.md",
-      "sha256": "e669ff4a13958d466c3b6f2a312615a37013df5805b290dd0e1badb84a59c85d",
-      "bytes": 6349,
-      "lines": 155
+      "sha256": "57da27a76bcd5dbd4cf79769fed294012cdfa63af262e54ebcc6f724af0c273f",
+      "bytes": 5773,
+      "lines": 67
     },
     {
       "path": "examples/fictional-product-example.md",
-      "sha256": "d756f3492cda8b030cdcaf23510bcf6971f08c34d056d1010221fe942a5c13b9",
-      "bytes": 1923,
-      "lines": 55
+      "sha256": "908971159a702196eb792c03e7341d0772d5f0982dcd6b7f96dd31d965173483",
+      "bytes": 2575,
+      "lines": 36
     },
     {
       "path": "LICENSE.md",
@@ -89,9 +89,9 @@
     },
     {
       "path": "README.md",
-      "sha256": "ffdb46e524e760a64d44b2a71a38657c1e9226b203db1e9f677f8294bf25b970",
-      "bytes": 9637,
-      "lines": 173
+      "sha256": "6b7b3a6d91169e08bde077bd9100c2c64394e890930ff4c0a9afb5e52b708cf5",
+      "bytes": 10825,
+      "lines": 157
     },
     {
       "path": "scripts/build-content-bundle.mjs",
@@ -101,12 +101,12 @@
     },
     {
       "path": "scripts/verify-web-chat-entry.mjs",
-      "sha256": "2a5c35e4c3819918d279bd0fa297ee16d222bd493be2e7356f41fba2baf74ba3",
-      "bytes": 2128,
-      "lines": 74
+      "sha256": "ab584c6423d86c3e7b7db1cacb095215e200d3ca55f62b9a314af80ee0d9af07",
+      "bytes": 2760,
+      "lines": 86
     }
   ],
-  "manifest_id": "781296e019e7e0505920f9752e2c4a7ab61446c75272053c3122f2adc3b11aa8",
+  "manifest_id": "96c65d2526c0d41b9df58dae2b7e43b8e9cbde94191823d7f44647ed6783d066",
   "bundle": "llms-full.txt",
   "checksum_file": "SHA256SUMS"
 }
