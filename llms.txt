@@ -4,10 +4,10 @@
 
 ## Start here
 
-- [Complete repository context](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt): Read this entire file first and verify its begin/end manifest ID.
+- [Complete repository context](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt): Use only for an explicit full-repository audit; then verify its begin/end manifest ID.
 - [AI execution entrypoint](https://github.com/null287/ai-video-request-compiler/blob/main/AI-ENTRYPOINT.md)
-- [Stable V1 specification](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md)
-- [Request input template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/01-request-brief.md)
-- [Execution draft template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/02-ai-execution-draft.md)
+- [Latest V1 specification](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/docs/ai-video-request-compiler-v1.md)
+- [Request input template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/docs/01-request-brief.md)
+- [Execution draft template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/docs/02-ai-execution-draft.md)
 
-Read the complete repository context first. Return the read receipt defined in README before processing the request. Use the repository as rules and the user's accompanying request as input. If no request is supplied, ask for it. Never invent missing project facts.
+For ordinary request compilation, execute the latest output contract embedded in README before reading optional supporting files. Return one merged brief. Every real time segment must contain exactly one `AI生成师负责：` label and one `设计师负责（剪辑）：` label. Do not output a read receipt or a preliminary question list. Use the repository as rules and the user's accompanying request as input. If no request is supplied, ask for it. Never invent missing project facts.

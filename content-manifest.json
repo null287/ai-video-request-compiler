@@ -17,21 +17,21 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a149e8512862f",
-      "bytes": 1236,
+      "sha256": "6b5d80f0f5d6f37fda3f2f44b8167ce3efd5c903ab3dfdd0bb33cc290c006988",
+      "bytes": 1697,
       "lines": 21
     },
     {
       "path": "AI-ENTRYPOINT.md",
-      "sha256": "572c8716903aa05b0f00f9211f4e0e3b9cb04d9de0cc4c46337c095dbb64251d",
-      "bytes": 3013,
-      "lines": 47
+      "sha256": "36a0a6868419146531285325b1111849ff56d360f5ae7667148046cb147135cb",
+      "bytes": 3169,
+      "lines": 48
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "23551dc7755e340a96e23fab52d0af455a482788fcba041c91eea892ff28a7b4",
-      "bytes": 3361,
-      "lines": 39
+      "sha256": "e8df7593b96d74951b63602ce6bb3c64b54a157701918741757d94ebce34982d",
+      "bytes": 3756,
+      "lines": 42
     },
     {
       "path": "docs/01-request-brief.md",
@@ -41,9 +41,9 @@
     },
     {
       "path": "docs/02-ai-execution-draft.md",
-      "sha256": "b66de99f0c53708a31120d388837814bbe521e94026256a17999db69ebf1a89a",
-      "bytes": 3833,
-      "lines": 46
+      "sha256": "0c32b46f59d7edcd76c432e0ad4f18792db50e01fdf9b284a3a94972771823ee",
+      "bytes": 4323,
+      "lines": 56
     },
     {
       "path": "docs/03-review-and-cost-gates.md",
@@ -65,15 +65,15 @@
     },
     {
       "path": "docs/ai-video-request-compiler-v1.md",
-      "sha256": "c58662a11d4fe647773fecc121cf83ff208ce2f383648c3728ae93994ae3ce93",
-      "bytes": 6782,
-      "lines": 69
+      "sha256": "1b39f43a835003e082e795f82ce2333bca081d27d5bdbb86737ee34fe39595ce",
+      "bytes": 7397,
+      "lines": 76
     },
     {
       "path": "examples/fictional-product-example.md",
-      "sha256": "b8d972748127190173e147b449081959ceb19b86274fff69bdaaaab2a8d1748a",
-      "bytes": 3757,
-      "lines": 37
+      "sha256": "d664687621bc94e8173f24d3e0e687b217395bc1d2126e7f49946deb7147de0e",
+      "bytes": 3910,
+      "lines": 53
     },
     {
       "path": "LICENSE.md",
@@ -83,15 +83,15 @@
     },
     {
       "path": "llms.txt",
-      "sha256": "6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232ef85192a67",
-      "bytes": 1108,
+      "sha256": "a41fae3b13359afb0d4bba9a800ebc3e85260809f6cbf9106bd46533179cfa35",
+      "bytes": 1360,
       "lines": 13
     },
     {
       "path": "README.md",
-      "sha256": "9173db9ea7850139b78efa1e74fc68de95582a33c378381d3dee9a3838fd08c5",
-      "bytes": 11752,
-      "lines": 158
+      "sha256": "f9b6903c0161efea2c1df39d1b4d1f837de6a82093a82d7ee5544064f59a3179",
+      "bytes": 14190,
+      "lines": 200
     },
     {
       "path": "scripts/build-content-bundle.mjs",
@@ -101,12 +101,12 @@
     },
     {
       "path": "scripts/verify-web-chat-entry.mjs",
-      "sha256": "881d9daf55f6b419b4db28851635840f98af4349704c42f12a326541cc82d167",
-      "bytes": 2910,
-      "lines": 90
+      "sha256": "e09c60a2e74f9ee460c99d37c8af405c71008301e888276de6e3ec8c32e5dcaa",
+      "bytes": 5478,
+      "lines": 148
     }
   ],
-  "manifest_id": "f464075d74c132caa5ab50a710e9d285139bf40d1b629668b2d2d5b038d0d43c",
+  "manifest_id": "801f0411511f07f9f0919612ea00f038a480ec4a75cd02ffa4a4c105a8240827",
   "bundle": "llms-full.txt",
   "checksum_file": "SHA256SUMS"
 }

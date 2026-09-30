@@ -1,6 +1,6 @@
 # AI Video Request Compiler — Full Repository Context
 This file contains every canonical public source file in the repository.
-REPOSITORY-CONTENT-BEGIN:f464075d74c132caa5ab50a710e9d285139bf40d1b629668b2d2d5b038d0d43c
+REPOSITORY-CONTENT-BEGIN:801f0411511f07f9f0919612ea00f038a480ec4a75cd02ffa4a4c105a8240827
 SOURCE-FILE-COUNT:17
 
 ## Content manifest
@@ -25,21 +25,21 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "AGENTS.md",
-      "sha256": "63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a149e8512862f",
-      "bytes": 1236,
+      "sha256": "6b5d80f0f5d6f37fda3f2f44b8167ce3efd5c903ab3dfdd0bb33cc290c006988",
+      "bytes": 1697,
       "lines": 21
     },
     {
       "path": "AI-ENTRYPOINT.md",
-      "sha256": "572c8716903aa05b0f00f9211f4e0e3b9cb04d9de0cc4c46337c095dbb64251d",
-      "bytes": 3013,
-      "lines": 47
+      "sha256": "36a0a6868419146531285325b1111849ff56d360f5ae7667148046cb147135cb",
+      "bytes": 3169,
+      "lines": 48
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "23551dc7755e340a96e23fab52d0af455a482788fcba041c91eea892ff28a7b4",
-      "bytes": 3361,
-      "lines": 39
+      "sha256": "e8df7593b96d74951b63602ce6bb3c64b54a157701918741757d94ebce34982d",
+      "bytes": 3756,
+      "lines": 42
     },
     {
       "path": "docs/01-request-brief.md",
@@ -49,9 +49,9 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "docs/02-ai-execution-draft.md",
-      "sha256": "b66de99f0c53708a31120d388837814bbe521e94026256a17999db69ebf1a89a",
-      "bytes": 3833,
-      "lines": 46
+      "sha256": "0c32b46f59d7edcd76c432e0ad4f18792db50e01fdf9b284a3a94972771823ee",
+      "bytes": 4323,
+      "lines": 56
     },
     {
       "path": "docs/03-review-and-cost-gates.md",
@@ -73,15 +73,15 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "docs/ai-video-request-compiler-v1.md",
-      "sha256": "c58662a11d4fe647773fecc121cf83ff208ce2f383648c3728ae93994ae3ce93",
-      "bytes": 6782,
-      "lines": 69
+      "sha256": "1b39f43a835003e082e795f82ce2333bca081d27d5bdbb86737ee34fe39595ce",
+      "bytes": 7397,
+      "lines": 76
     },
     {
       "path": "examples/fictional-product-example.md",
-      "sha256": "b8d972748127190173e147b449081959ceb19b86274fff69bdaaaab2a8d1748a",
-      "bytes": 3757,
-      "lines": 37
+      "sha256": "d664687621bc94e8173f24d3e0e687b217395bc1d2126e7f49946deb7147de0e",
+      "bytes": 3910,
+      "lines": 53
     },
     {
       "path": "LICENSE.md",
@@ -91,15 +91,15 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "llms.txt",
-      "sha256": "6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232ef85192a67",
-      "bytes": 1108,
+      "sha256": "a41fae3b13359afb0d4bba9a800ebc3e85260809f6cbf9106bd46533179cfa35",
+      "bytes": 1360,
       "lines": 13
     },
     {
       "path": "README.md",
-      "sha256": "9173db9ea7850139b78efa1e74fc68de95582a33c378381d3dee9a3838fd08c5",
-      "bytes": 11752,
-      "lines": 158
+      "sha256": "f9b6903c0161efea2c1df39d1b4d1f837de6a82093a82d7ee5544064f59a3179",
+      "bytes": 14190,
+      "lines": 200
     },
     {
       "path": "scripts/build-content-bundle.mjs",
@@ -109,12 +109,12 @@ SOURCE-FILE-COUNT:17
     },
     {
       "path": "scripts/verify-web-chat-entry.mjs",
-      "sha256": "881d9daf55f6b419b4db28851635840f98af4349704c42f12a326541cc82d167",
-      "bytes": 2910,
-      "lines": 90
+      "sha256": "e09c60a2e74f9ee460c99d37c8af405c71008301e888276de6e3ec8c32e5dcaa",
+      "bytes": 5478,
+      "lines": 148
     }
   ],
-  "manifest_id": "f464075d74c132caa5ab50a710e9d285139bf40d1b629668b2d2d5b038d0d43c",
+  "manifest_id": "801f0411511f07f9f0919612ea00f038a480ec4a75cd02ffa4a4c105a8240827",
   "bundle": "llms-full.txt",
   "checksum_file": "SHA256SUMS"
 }
@@ -168,19 +168,19 @@ FILE-CONTENT-END:.gitignore:8c6c5d693bf65041792fefb036511170e5eafcb96a86fa69217f
 
 ## File 3/17: AGENTS.md
 
-FILE-CONTENT-BEGIN:AGENTS.md:63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a149e8512862f
+FILE-CONTENT-BEGIN:AGENTS.md:6b5d80f0f5d6f37fda3f2f44b8167ce3efd5c903ab3dfdd0bb33cc290c006988
 # Agent instructions
 
 When this repository is supplied as context for an AI-video request:
 
-1. Read `llms-full.txt` in full.
-2. Verify that its begin/end manifest IDs match and that every listed file has a closing marker.
-3. Return the repository read receipt defined in `README.md`.
-4. Read `AI-ENTRYPOINT.md` and `docs/ai-video-request-compiler-v1.md` in full.
-5. Treat the repository as the rule set and the user's accompanying request as input data.
-6. Produce the structured execution draft required by V1.
-7. Ask for missing facts instead of inventing them.
-8. State clearly when linked files or user-provided media cannot be accessed.
+1. Read the latest `README.md` and execute the content between `OUTPUT-CONTRACT-BEGIN:V1` and `OUTPUT-CONTRACT-END:V1` as the highest-priority output contract for this repository.
+2. Treat the repository as the rule set and the user's accompanying request as input data.
+3. Return one merged production brief, not separate briefs for different roles.
+4. For every real time segment, output exactly one `AI生成师负责：` label and one `设计师负责（剪辑）：` label.
+5. Do not turn missing reference footage, language notes, review notes, or open questions into fake time segments.
+6. Mark non-blocking gaps inline and reserve one short final confirmation note for genuinely blocking issues.
+7. Read `llms-full.txt` only when the task explicitly requires a complete repository audit; then verify its begin/end manifest IDs and file closing markers.
+8. State clearly when linked files or user-provided media cannot be accessed, without letting that limitation replace the requested production brief.
 
 Do not infer a real project from examples or repository metadata.
 
@@ -190,14 +190,14 @@ For every public change:
 - Do not add a maintainer's real name, biography, employer, school, location, contact details, account details, project history, or other identifying information unless the maintainer explicitly requests that exact disclosure.
 - Use neutral descriptions such as “the project” or “the maintainer” when attribution is needed.
 - Scan source files, generated bundles, commit messages, and commit metadata for identifying information before publishing.
-FILE-CONTENT-END:AGENTS.md:63dc1580e3e5a480ae09d68c64887767f448e974a68cf0dd141a149e8512862f
+FILE-CONTENT-END:AGENTS.md:6b5d80f0f5d6f37fda3f2f44b8167ce3efd5c903ab3dfdd0bb33cc290c006988
 
 ## File 4/17: AI-ENTRYPOINT.md
 
-FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:572c8716903aa05b0f00f9211f4e0e3b9cb04d9de0cc4c46337c095dbb64251d
+FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:36a0a6868419146531285325b1111849ff56d360f5ae7667148046cb147135cb
 # AI 单链接执行入口
 
-网页端 ChatGPT 和 Grok 通过仓库根链接进入时，应直接使用 README 中 `WEB-CHAT-PROTOCOL-BEGIN:V1` 与 `WEB-CHAT-PROTOCOL-END:V1` 之间的自包含协议，不需要递归读取仓库，也不能在读取不完整时假装已经加载全部文件。
+网页端 ChatGPT 和 Grok 通过仓库根链接进入时，应重新读取 README 最新内容，优先执行 `OUTPUT-CONTRACT-BEGIN:V1` 与 `OUTPUT-CONTRACT-END:V1` 之间的固定输出合同，再遵守外层网页协议。不能只依据搜索摘要、旧缓存或仓库文件名推断规则。
 
 支持仓库文件系统、代码执行或附件读取的 Agent，可以在需要审计完整仓库时读取：
 
@@ -214,20 +214,21 @@ FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:572c8716903aa05b0f00f9211f4e0e3b9cb04d9de0cc
 
 [`docs/ai-video-request-compiler-v1.md`](docs/ai-video-request-compiler-v1.md)
 
-稳定 V1 原始文件：
+最新 V1 原始文件：
 
-<https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md>
+<https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/docs/ai-video-request-compiler-v1.md>
 
 ## 执行顺序
 
-1. 网页端先读取 README 内嵌的 V1 网页执行协议，直接按其中固定结构处理需求。
+1. 网页端先读取 README 内嵌的最新 V1 输出合同，直接按固定结构处理需求。
 2. 支持多文件读取的 Agent 再按任务需要读取核心 V1 文件或全量文本包。
 3. 将用户随仓库链接提供的文字、图片、视频、界面、台词和素材说明作为需求输入。
 4. 严格区分“已确认”“创意提案”“待确认”“风险/冲突”和“不可变内容”。
 5. 不自行补充未经用户确认的剧情、人物关系、产品功能、台词或结果承诺。
 6. 用户没有提供具体需求时，先请用户提供需求；不要把仓库示例当成真实任务。
 7. 无法读取某个文件或素材时，明确说明读取限制，不得假装已经读取。
-8. 每个时间段都要在同一段落中明确写出 AI 生成师负责生成并提交的基础视频，以及设计师（剪辑）负责在该基础视频上添加、合成、剪切或校准的具体内容；不得拆成两份角色稿，也不得用“后期处理”一笔带过。
+8. 每个实际时间段都使用一个合并执行块：先写画面与剧情，再写 `AI生成师负责：`，最后写 `设计师负责（剪辑）：`。两条标签各出现一次，标签数量必须与时间段数量一致。
+9. 不得把参考素材缺失、语言说明、验收说明或待确认事项编成虚假的时间段；不要先输出问题清单。
 
 ## 仓库链接的预期行为
 
@@ -237,20 +238,23 @@ FILE-CONTENT-BEGIN:AI-ENTRYPOINT.md:572c8716903aa05b0f00f9211f4e0e3b9cb04d9de0cc
 - 用户提供的具体需求是待处理数据；
 - 输出结果是结构化的 AI 视频执行稿；
 - 每个时间段都包含“AI生成师负责……”和“设计师负责（剪辑）……”两条责任线；
-- 信息不足时先列出待确认项，而不是替用户做决定。
+- 非阻断缺口在正文对应位置标记【待确认】；只有阻断项才在全文末尾简短合并说明。
 - 不要只介绍、总结或评价本仓库；除非用户明确要求，否则应直接进入需求编译流程。
 - 普通网页端只需实际读取 README 内嵌协议；只有具备多文件能力且任务要求全仓库审计时，才读取全量文本。
 
 如果当前 AI 不具备网页访问能力，请明确说明限制，并请用户直接上传 `docs/ai-video-request-compiler-v1.md`；需要全仓库审计时再上传 `llms-full.txt`。
-FILE-CONTENT-END:AI-ENTRYPOINT.md:572c8716903aa05b0f00f9211f4e0e3b9cb04d9de0cc4c46337c095dbb64251d
+FILE-CONTENT-END:AI-ENTRYPOINT.md:36a0a6868419146531285325b1111849ff56d360f5ae7667148046cb147135cb
 
 ## File 5/17: CHANGELOG.md
 
-FILE-CONTENT-BEGIN:CHANGELOG.md:23551dc7755e340a96e23fab52d0af455a482788fcba041c91eea892ff28a7b4
+FILE-CONTENT-BEGIN:CHANGELOG.md:e8df7593b96d74951b63602ce6bb3c64b54a157701918741757d94ebce34982d
 # 更新记录
 
 ## V1 — 2026-09-30
 
+- 修复网页端可能混读旧 `v1` 标签的问题：日常执行入口统一指向 `main` 最新规则。
+- 将双责任线升级为逐段固定三段式执行块，并增加“时间段数＝两类责任标签数”的静默计数门禁。
+- 禁止把参考素材缺失、语言说明、验收说明和待确认事项伪装成成片时间段；取消先输出问题清单的冲突指令。
 - 为每个时间段增加强制的双责任线：明确 AI 生成师提交的基础视频，以及设计师（剪辑）在该基础视频上继续完成的剪切、合成、字幕、UI、特效、音频和包装工作。
 - 明确双责任线必须合并在同一份按时间轴展开的需求制作文本中，不再拆成两份角色稿；每段统一采用“画面与剧情 → AI生成师负责 → 设计师负责（剪辑） → 连续性与禁止项”的顺序。
 - 同步更新网页端自包含协议、完整规范、执行稿模板、需求输入模板、AI 入口和虚构示例。
@@ -286,7 +290,7 @@ FILE-CONTENT-BEGIN:CHANGELOG.md:23551dc7755e340a96e23fab52d0af455a482788fcba041c
 - 根据网页端实测，将 ChatGPT / Grok 入口改为 README 内嵌的自包含 V1 执行协议，不再依赖递归读取仓库文件。
 - 增加网页入口自动验证，防止后续更新重新引入二级文件依赖。
 - 将 `llms-full.txt` 调整为全仓库审计与附件兜底，不再作为普通网页聊天的必经入口。
-FILE-CONTENT-END:CHANGELOG.md:23551dc7755e340a96e23fab52d0af455a482788fcba041c91eea892ff28a7b4
+FILE-CONTENT-END:CHANGELOG.md:e8df7593b96d74951b63602ce6bb3c64b54a157701918741757d94ebce34982d
 
 ## File 6/17: docs/01-request-brief.md
 
@@ -426,7 +430,7 @@ FILE-CONTENT-END:docs/01-request-brief.md:61fffe2cb63d5490f4df8f0712132eeb3960a5
 
 ## File 7/17: docs/02-ai-execution-draft.md
 
-FILE-CONTENT-BEGIN:docs/02-ai-execution-draft.md:b66de99f0c53708a31120d388837814bbe521e94026256a17999db69ebf1a89a
+FILE-CONTENT-BEGIN:docs/02-ai-execution-draft.md:0c32b46f59d7edcd76c432e0ad4f18792db50e01fdf9b284a3a94972771823ee
 # AI 视频需求制作文本模板
 
 本文件用于把自然语言需求整理成可以直接提交给制作人员的成品文本。默认不要输出复杂表格，也不要把每个时间段拆成字段清单。
@@ -436,11 +440,11 @@ FILE-CONTENT-BEGIN:docs/02-ai-execution-draft.md:b66de99f0c53708a31120d388837814
 ```text
 你是 AI 视频需求编译助手。只输出整理后的完整需求制作文本，不要介绍方法论，不要复述仓库，不要先输出表格或空模板。
 
-先用一段粗体总述写清总时长、制作数量、总剧情因果链、组别规则和全局禁止项；再按时间顺序输出粗体连续段落。每个时间段必须写成一个完整段落，标题采用“**0–X秒｜本段目的或剧情节点。**”，段落内部按“本段画面与剧情 → AI生成师负责：…… → 设计师负责（剪辑）：…… → 连续性和禁止项”的顺序自然融合，不得拆成字段清单，也不得分别输出两份角色稿。
+最终只输出一份合并稿。先用一段粗体总述写清总时长、制作数量、总剧情因果链、组别规则和全局禁止项；再按时间顺序输出执行块。每个实际时间段固定包含三部分：`**0–X秒｜本段目的或剧情节点。**`及本段画面与剧情、`**AI生成师负责：**`、`**设计师负责（剪辑）：**`。不得省略标签，也不得分别输出两份角色稿。
 
 如果用户已经写好了时间轴，保留其时间段、段落顺序、台词原文、链接、数字、角色关系和禁止项，只做语病修正、冲突标记和执行化整理，不得把它降级成简略提纲。
 
-正文中直接标记【待确认】、【需要确认】或【创意提案】。无法读取素材时如实说明。没有用户授权，不自动生成模型 Prompt、英文增强 Prompt 或宣传文案。输出前静默检查时长、台词、连续性、UI因果和风险；只在有阻断项时在末尾简短说明。
+正文中直接标记【待确认】、【需要确认】或【创意提案】。无法读取素材时如实说明，但不得把素材缺失编成时间段。没有用户授权，不自动生成模型 Prompt、英文增强 Prompt 或宣传文案。不要先列问题；输出前静默检查时长、台词、连续性、UI因果和风险，并确认两条责任标签的数量都等于实际时间段数量。
 ```
 
 ## 默认成品结构
@@ -450,9 +454,17 @@ FILE-CONTENT-BEGIN:docs/02-ai-execution-draft.md:b66de99f0c53708a31120d388837814
 
 **总时长【T】秒整，共制作【N】组。总剧情/全局要求固定为：【固定因果链、人物组合、结局和全局限制】。**
 
-**【0–X秒｜本段目的或剧情节点】。这里写一个完整连续的执行段落，先写画面、人物、动作、镜头、声音、台词和 UI，再写“AI生成师负责：……”与“设计师负责（剪辑）：……”的具体内容，最后写连续性和禁止项；所有内容必须合并在同一段中。**
+**【0–X秒｜本段目的或剧情节点】。** 这里写本段最终画面、人物、动作、镜头、声音、台词、连续性和禁止项。
 
-**【X–X秒｜本段目的或剧情节点】。继续写一个完整连续的执行段落；所有关键数字、文字、持有人、动作方向和衔接关系都要明确。**
+**AI生成师负责：** 写清本段需要生成并提交的基础视频。
+
+**设计师负责（剪辑）：** 写清基于本段基础视频完成的字幕、UI、跟踪、特效、音频、节奏和包装；涉及后期元素时写明文案、载体、位置及出现/消失秒点。
+
+**【X–X秒｜本段目的或剧情节点】。** 继续按相同三段式执行块写到视频结束；所有关键数字、文字、持有人、动作方向和衔接关系都要明确。
+
+**AI生成师负责：** 不得省略。
+
+**设计师负责（剪辑）：** 不得省略。
 
 **（持续到视频结束。）**
 ```
@@ -464,6 +476,8 @@ FILE-CONTENT-BEGIN:docs/02-ai-execution-draft.md:b66de99f0c53708a31120d388837814
 - 正式台词逐字保留，注明说话者和出现秒点；不能自行润色、翻译或补句。
 - 字幕、UI、特效和其他后期元素写清文案、载体、位置、出现秒点、持续时间、消失秒点和负责环节。
 - 每个时间段都要分清源视频与后期交付：AI生成师负责生成并提交什么，设计师（剪辑）基于该视频补什么；不得用“后期处理”代替具体责任和交付物。
+- 每个时间段都必须完整出现两条责任标签；输出前统计时间段数量，两条标签的数量必须分别与其一致。
+- 参考素材缺失、语言版本说明、验收说明和待确认事项不属于成片时间轴，不得伪装成时间段。
 - 手机 UI 必须绑定到同一实体手机、同一持有人和明确的扫描动作，不得漂浮到手机外。
 - 参考视频只继承用户指定的结构、动作、镜头或节奏；人物、声音、字幕、水印、Logo 和完整画面除非明确授权，否则不自动继承。
 - 用户未提供的信息在正文对应位置标记【待确认】，不要在文末堆一份空泛问题表。
@@ -473,7 +487,7 @@ FILE-CONTENT-BEGIN:docs/02-ai-execution-draft.md:b66de99f0c53708a31120d388837814
 ## 输出后最小检查
 
 只在必要时简短补充：时长是否可执行、是否存在关键待确认项、是否存在连续性/UI/权利风险，以及当前能否进入样片验证。检查说明不能替代前面的完整需求制作文本。
-FILE-CONTENT-END:docs/02-ai-execution-draft.md:b66de99f0c53708a31120d388837814bbe521e94026256a17999db69ebf1a89a
+FILE-CONTENT-END:docs/02-ai-execution-draft.md:0c32b46f59d7edcd76c432e0ad4f18792db50e01fdf9b284a3a94972771823ee
 
 ## File 8/17: docs/03-review-and-cost-gates.md
 
@@ -690,7 +704,7 @@ FILE-CONTENT-END:docs/05-public-release-risk-map.md:366431c74fb307fc0560ad6a4eeb
 
 ## File 11/17: docs/ai-video-request-compiler-v1.md
 
-FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:c58662a11d4fe647773fecc121cf83ff208ce2f383648c3728ae93994ae3ce93
+FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:1b39f43a835003e082e795f82ce2333bca081d27d5bdbb86737ee34fe39595ce
 # AI 视频需求编译与执行稿生成规范（公开版 V1）
 
 > 本文件是面向社区的工具无关重写版。V1 采用角色中立的表达，保留需求编译、执行时间轴、素材职责、台词锁定和验收门禁等方法，不包含任何特定组织原文、项目事实或内部配置。
@@ -720,9 +734,10 @@ FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:c58662a11d4fe647773fecc1
 6. 看不到或无法逐帧读取的素材，必须明确说无法核验，不得假装看过。
 7. 信息不足时标记【待确认】；存在事实、权利、时长或可执行风险时标记【需要确认】。
 8. 在完成时长检查、待确认问题和验收标准前，不要输出“可以直接生成”的结论。
-9. 每个时间段必须明确两条责任线：`AI生成师负责：……`，说明要生成并提交的原始画面或基础视频；`设计师负责（剪辑）：……`，说明设计师要基于这段基础视频剪切、拼接、校准或添加的字幕、UI、产品信息、特效、音频和最终包装。不得用“后期处理”一笔带过；没有对应内容时写“无”。
+9. 每个实际时间段必须完整出现两条责任标签：`AI生成师负责：……`，说明要生成并提交的原始画面或基础视频；`设计师负责（剪辑）：……`，说明设计师要基于这段基础视频剪切、拼接、校准或添加的字幕、UI、产品信息、特效、音频和最终包装。不得用“后期处理”一笔带过；没有对应内容时也要明确写“无新增任务”。
+10. 不得把参考素材缺失、语言版本说明、验收说明或待确认事项伪装成成片时间段。不要先列待确认问题；非阻断缺口就地标记，阻断项在全文末尾简短合并。
 
-默认只输出一份可以直接提交给制作人员的完整需求制作文本，不要先输出方法论、分类表或空字段表格，也不要分别输出 AI 生成师稿和设计师（剪辑）稿。先用一段粗体总述锁定总剧情和全局约束，再用按时间顺序排列的粗体连续段落展开执行细节。每个时间段必须写成一个完整段落，不得拆成“镜头/画面、人物设定、人物动作、台词、字幕、UI、后期”字段清单；在同一段落中按“本段画面与剧情 → AI生成师负责 → 设计师负责（剪辑） → 连续性与禁止项”的顺序写清。若用户已经给出明确时间轴，尽量保持时间段、段落顺序、台词、链接、数字和禁止项，只做语病修正、冲突标记和执行化整理，不得降级成简略提纲。
+默认只输出一份可以直接提交给制作人员的完整需求制作文本，不要先输出方法论、分类表、空字段表格或问题清单，也不要分别输出 AI 生成师稿和设计师（剪辑）稿。先用一段粗体总述锁定总剧情和全局约束，再用按时间顺序排列的执行块展开。每个时间段固定按“本段画面与剧情 → `AI生成师负责：` → `设计师负责（剪辑）：`”输出。若用户已经给出明确时间轴，尽量保持时间段、段落顺序、台词、链接、数字和禁止项，只做语病修正、冲突标记和执行化整理，不得降级成简略提纲。输出前统计实际时间段及两条责任标签的数量，三者必须完全一致。
 ```
 
 ## 输出格式
@@ -733,9 +748,13 @@ FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:c58662a11d4fe647773fecc1
 
 **总时长【T】秒整，共制作【N】组。总剧情/全局要求固定为：【用一段话概括固定因果链、人物组合、结局和不得改变的全局限制】。**
 
-**【0–X秒｜本段目的或剧情节点】。在同一个完整连续段落中先写画面、人物位置、动作先后、镜头、声音、锁定台词、字幕和 UI/产品，再直接写“AI生成师负责：……”和“设计师负责（剪辑）：……”两条责任线，最后写清连续性和禁止项；不得拆成两份角色稿。没有的项目直接写“无”。**
+**【0–X秒｜本段目的或剧情节点】。** 写清本段最终画面、人物位置、动作先后、镜头、声音、锁定台词、连续性和禁止项。
 
-**【X–X秒｜本段目的或剧情节点】。继续用一个完整段落描述本段，不要拆成字段清单；所有数字、台词、屏幕文字、角色关系、手机持有人、动作方向和镜头衔接都写到可直接执行。**
+**AI生成师负责：** 写清本段要生成并提交的基础视频及需要为后期保留的稳定画面。
+
+**设计师负责（剪辑）：** 写清基于本段基础视频完成的字幕、UI、跟踪、遮罩、特效、音频、节奏和包装；涉及后期元素时写明文案、载体、位置及出现/消失秒点。
+
+**【X–X秒｜本段目的或剧情节点】。** 继续按相同三段式执行块写到视频结束；所有数字、台词、屏幕文字、角色关系、手机持有人、动作方向和镜头衔接都写到可直接执行，并再次完整写出两条责任标签。
 
 **（持续到视频结束；不得有未解释的空档或重叠。）**
 
@@ -745,6 +764,8 @@ FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:c58662a11d4fe647773fecc1
 
 - 台词、字幕、UI、特效和其他后期元素必须在所属时间段的连续段落中写清说话者/文案、出现秒点、位置、持续时间、消失秒点和负责环节。
 - 每个时间段必须把“AI生成师负责生成什么”和“设计师（剪辑）基于该基础视频补什么”写成两条明确责任线；涉及 UI、字幕、产品信息或包装时，优先写明其载体、叠加位置和与源视频的衔接关系。
+- 每个实际时间段都必须完整出现两条责任标签；输出前计数，标签数量与时间段数量不一致时必须重写。
+- 素材读取限制和待确认事项不能独立占用成片时间段；它们只能就地简短标注或放在全文末尾。
 - 手机 UI 必须绑定同一实体手机、同一持有人和明确的扫描动作；不得漂浮到手机外，也不得无因果地覆盖全屏。
 - 参考素材只继承用户指定的结构、动作、镜头或节奏；人物、声音、字幕、水印、Logo 和完整画面除非明确授权，否则不自动继承。
 - 时间轴必须从 0 秒连续覆盖到总时长结束。若口播、动作、镜头或 UI 超时，只提出延长、压缩非核心动作、拆分视频、独立处理音频或交给后期等选项，不得悄悄删改锁定台词或核心剧情。
@@ -757,14 +778,14 @@ FILE-CONTENT-BEGIN:docs/ai-video-request-compiler-v1.md:c58662a11d4fe647773fecc1
 1. ChatGPT、Grok 等网页端直接读取 README 中 `WEB-CHAT-PROTOCOL-BEGIN:V1` 与 `WEB-CHAT-PROTOCOL-END:V1` 之间的自包含协议，不要求递归遍历仓库。
 2. 网页端不能把搜索摘要、文件名或仓库结构当成已经读取全部规则；看不到协议正文时必须明确说明。
 3. 支持文件系统、代码执行或附件读取的 Agent，才使用 `llms-full.txt` 做全仓库审计和校验。
-4. 生产复现需要固定版本时，使用版本标签或 commit；日常使用仓库根链接读取当前网页协议。
+4. 生产复现需要固定版本时，使用明确的 commit；日常使用仓库根链接读取 `main` 上的最新网页协议，不读取旧 `v1` 标签代替当前规则。
 5. 如果无法联网或页面内容不完整，要求用户上传本 Markdown 文件，不得假装已经读取。
 6. 规范只负责约束需求编译，不替代用户提供的具体需求、产品事实和授权信息。
-FILE-CONTENT-END:docs/ai-video-request-compiler-v1.md:c58662a11d4fe647773fecc121cf83ff208ce2f383648c3728ae93994ae3ce93
+FILE-CONTENT-END:docs/ai-video-request-compiler-v1.md:1b39f43a835003e082e795f82ce2333bca081d27d5bdbb86737ee34fe39595ce
 
 ## File 12/17: examples/fictional-product-example.md
 
-FILE-CONTENT-BEGIN:examples/fictional-product-example.md:b8d972748127190173e147b449081959ceb19b86274fff69bdaaaab2a8d1748a
+FILE-CONTENT-BEGIN:examples/fictional-product-example.md:d664687621bc94e8173f24d3e0e687b217395bc1d2126e7f49946deb7147de0e
 # 虚构示例：15 秒产品演示视频
 
 > 本示例中的产品、人物、台词和画面均为虚构，只用于展示填写方式。
@@ -783,15 +804,31 @@ FILE-CONTENT-BEGIN:examples/fictional-product-example.md:b8d972748127190173e147b
 
 ## 编译后的完整需求制作文本
 
-**总时长15秒整，先验证1组。核心剧情固定为：人物从桌面拿起手机，在虚构时间管理 App 中查看“今日重点”，随后回到桌面完成书写，最后进入纯色结尾卡。产品、人物、台词和画面均为虚构；参考视频只用于手机被拿起的动作，不继承原人物、原背景、原字幕、原 Logo 和原音乐。**
+**总时长15秒整，先验证1组。总剧情/全局要求固定为：人物从桌面拿起手机，在虚构时间管理 App 中查看“今日重点”，随后回到桌面完成书写，最后进入纯色结尾卡。产品、人物、台词和画面均为虚构；参考视频只用于手机被拿起的动作，不继承原人物、原背景、原字幕、原 Logo 和原音乐。**
 
-**0–3秒｜拿起手机。** 桌面上只放一部手机和一张便签，手机屏幕朝上；R1从画面右侧伸手拿起手机，动作从右向左完成。镜头使用固定中近景并轻微推进，保持桌面和手部动作连续。AI生成师负责生成桌面、便签、R1伸手拿起手机的完整基础视频，并保持手机屏幕朝上、动作从右向左且无其他人物或道具；设计师负责（剪辑）：完成0–3秒的节奏裁切和画面检查，本段无台词、无字幕、无 UI，不额外叠加内容。
+**0–3秒｜拿起手机。** 桌面上只放一部手机和一张便签，手机屏幕朝上；R1从画面右侧伸手拿起手机，动作从右向左完成。镜头使用固定中近景并轻微推进，保持桌面和手部动作连续；本段无台词、无字幕、无 UI，禁止增加其他人物或道具。
 
-**3–8秒｜查看今日重点。** 手机停在胸口高度，屏幕朝向镜头但不遮挡人物脸部；镜头切到手机和手部近景，R1点击虚构 TempoNote 中已经提供的“今日重点”入口。AI生成师负责生成R1持同一部实体手机、点击屏幕并保持手部与手机连续的基础视频，手机屏幕保留稳定、清晰、可供后期合成的平面；设计师负责（剪辑）：把已经提供的虚构 TempoNote UI 合成到这部手机的屏幕内，并校准点击动作与“今日重点”界面的出现时机。UI不得漂浮到手机外，不得穿手，不新增按钮、数字或功能说明。
+**AI生成师负责：** 生成桌面、便签及R1伸手拿起手机的完整基础视频，保持手机屏幕朝上、动作从右向左，并为后续节奏裁切保留完整动作头尾。
 
-**8–13秒｜回到行动。** R1放下手机，回到桌面前开始书写，镜头回到中近景并保持动作连贯。R1逐字说出锁定台词：“把今天最重要的一件事，留给真正重要的事。”AI生成师负责生成R1放下手机、回到桌面前书写并说出锁定台词的连续基础视频，保持人物、桌面、便签和手机位置前后一致；设计师负责（剪辑）：完成口播对齐、音量和节奏校准，本段不新增字幕和 UI，台词不得改写、翻译或补句。
+**设计师负责（剪辑）：** 完成0–3秒的节奏裁切和画面检查；本段无新增字幕、UI或特效。
 
-**13–15秒｜产品收束。** 画面从书写动作切入纯色结尾背景，显示虚构产品名和已确认的 CTA；没有额外口播。AI生成师负责生成从书写动作自然切入干净纯色结尾背景的基础视频，不自行增加品牌、Logo、功能或口播；设计师负责（剪辑）：制作13–15秒结尾卡，添加已经确认的虚构产品名和 CTA，并检查转场、时长及文字可读性。验收时必须看到台词完整、手机不漂浮不穿手、动作无跳变，且结尾卡不出现真实品牌或未经确认的功能承诺。
+**3–8秒｜查看今日重点。** 手机停在胸口高度，屏幕朝向镜头但不遮挡人物脸部；镜头切到手机和手部近景，R1点击虚构 TempoNote 中已经提供的“今日重点”入口。手机始终绑定在R1手中，不得漂浮或穿手；不得新增按钮、数字或功能说明。
+
+**AI生成师负责：** 生成R1持同一部实体手机、点击屏幕并保持手部与手机连续的基础视频，手机屏幕保留稳定、清晰、无遮挡且可供后期合成的平面。
+
+**设计师负责（剪辑）：** 把已经提供的虚构 TempoNote UI 合成到这部实体手机屏幕内，完成透视、遮罩与跟踪，并校准点击动作和“今日重点”界面的出现时机；UI不得漂浮到手机外。
+
+**8–13秒｜回到行动。** R1放下手机，回到桌面前开始书写，镜头回到中近景并保持动作连贯。R1逐字说出锁定台词：“把今天最重要的一件事，留给真正重要的事。”人物、桌面、便签和手机位置必须前后一致，台词不得改写、翻译或补句。
+
+**AI生成师负责：** 生成R1放下手机、回到桌面前书写并说出锁定台词的连续基础视频，保持动作、口型和场景连续。
+
+**设计师负责（剪辑）：** 完成口播对齐、音量和节奏校准；本段无新增字幕和 UI。
+
+**13–15秒｜产品收束。** 画面从书写动作切入纯色结尾背景，没有额外口播；结尾不得出现真实品牌或未经确认的功能承诺。
+
+**AI生成师负责：** 生成从书写动作自然切入干净纯色结尾背景的基础视频，不自行增加品牌、Logo、功能或口播。
+
+**设计师负责（剪辑）：** 制作13–15秒结尾卡，添加已经确认的虚构产品名和 CTA，并检查转场、时长及文字可读性。
 
 ## 这个例子体现的规则
 
@@ -802,7 +839,7 @@ FILE-CONTENT-BEGIN:examples/fictional-product-example.md:b8d972748127190173e147b
 5. 每个时间段都把 AI 生成师的源视频交付和设计师（剪辑）的后续补充分开写清。
 6. 先做 1 条样片验证，再决定是否扩展数量。
 
-FILE-CONTENT-END:examples/fictional-product-example.md:b8d972748127190173e147b449081959ceb19b86274fff69bdaaaab2a8d1748a
+FILE-CONTENT-END:examples/fictional-product-example.md:d664687621bc94e8173f24d3e0e687b217395bc1d2126e7f49946deb7147de0e
 
 ## File 13/17: LICENSE.md
 
@@ -820,25 +857,25 @@ FILE-CONTENT-END:LICENSE.md:a8bbcc7d91fa0d3a71521af867c52bbcbe0c3935b14aefbf5b96
 
 ## File 14/17: llms.txt
 
-FILE-CONTENT-BEGIN:llms.txt:6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232ef85192a67
+FILE-CONTENT-BEGIN:llms.txt:a41fae3b13359afb0d4bba9a800ebc3e85260809f6cbf9106bd46533179cfa35
 # AI Video Request Compiler
 
 > A tool-agnostic method for compiling an AI-video request into an executable, reviewable production brief.
 
 ## Start here
 
-- [Complete repository context](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt): Read this entire file first and verify its begin/end manifest ID.
+- [Complete repository context](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/llms-full.txt): Use only for an explicit full-repository audit; then verify its begin/end manifest ID.
 - [AI execution entrypoint](https://github.com/null287/ai-video-request-compiler/blob/main/AI-ENTRYPOINT.md)
-- [Stable V1 specification](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/ai-video-request-compiler-v1.md)
-- [Request input template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/01-request-brief.md)
-- [Execution draft template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/v1/docs/02-ai-execution-draft.md)
+- [Latest V1 specification](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/docs/ai-video-request-compiler-v1.md)
+- [Request input template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/docs/01-request-brief.md)
+- [Execution draft template](https://raw.githubusercontent.com/null287/ai-video-request-compiler/main/docs/02-ai-execution-draft.md)
 
-Read the complete repository context first. Return the read receipt defined in README before processing the request. Use the repository as rules and the user's accompanying request as input. If no request is supplied, ask for it. Never invent missing project facts.
-FILE-CONTENT-END:llms.txt:6573adea890ab15ce541e218beb7d4a9f42cef96b47878dba0e232ef85192a67
+For ordinary request compilation, execute the latest output contract embedded in README before reading optional supporting files. Return one merged brief. Every real time segment must contain exactly one `AI生成师负责：` label and one `设计师负责（剪辑）：` label. Do not output a read receipt or a preliminary question list. Use the repository as rules and the user's accompanying request as input. If no request is supplied, ask for it. Never invent missing project facts.
+FILE-CONTENT-END:llms.txt:a41fae3b13359afb0d4bba9a800ebc3e85260809f6cbf9106bd46533179cfa35
 
 ## File 15/17: README.md
 
-FILE-CONTENT-BEGIN:README.md:9173db9ea7850139b78efa1e74fc68de95582a33c378381d3dee9a3838fd08c5
+FILE-CONTENT-BEGIN:README.md:f9b6903c0161efea2c1df39d1b4d1f837de6a82093a82d7ee5544064f59a3179
 # AI 视频需求编译与执行规范
 
 把自然语言里的创意想法，编译成生成模型和制作人员都能执行、验收、复盘的 AI 视频任务。
@@ -848,7 +885,7 @@ FILE-CONTENT-BEGIN:README.md:9173db9ea7850139b78efa1e74fc68de95582a33c378381d3de
 把下面整段复制到 ChatGPT 或 Grok，并将最后一行替换成你的真实需求：
 
 ```text
-请联网读取这个仓库首页，并按照首页中的 V1 网页执行协议处理我的需求：
+请联网重新读取这个仓库首页的最新内容，并严格执行 `OUTPUT-CONTRACT-BEGIN:V1` 至 `OUTPUT-CONTRACT-END:V1` 之间的输出合同：
 https://github.com/null287/ai-video-request-compiler
 
 我的需求：
@@ -862,6 +899,42 @@ https://github.com/null287/ai-video-request-compiler
 ## ChatGPT / Grok V1 网页执行协议
 
 `WEB-CHAT-PROTOCOL-BEGIN:V1`
+
+`OUTPUT-CONTRACT-BEGIN:V1`
+
+### 不可违反的输出合同
+
+最终输出只能是一份合并稿，不能分别输出“AI 生成师稿”和“设计师稿”，也不要先解释仓库、分析过程或待确认问题。
+
+严格使用以下结构：
+
+```text
+# 【AI 视频需求制作文本】
+
+参考视频：【保留用户提供的链接、文件名和已确认的参考范围；没有则省略】
+
+**总时长【T】秒整，共制作【N】组。总剧情/全局要求固定为：【用一段高密度文字锁定完整剧情因果、人物关系、版本变量、全局连续性和禁止项】。**
+
+**【0–X秒｜本段目的或剧情节点】。** 【本段最终画面、人物、场景、动作顺序、镜头、说话角色、锁定台词及必要的连续性和禁止项。】
+
+**AI生成师负责：** 【本段需要生成并提交的基础视频，包括人物、环境、实体道具、动作、口播、镜头和供后期使用的稳定画面。】
+
+**设计师负责（剪辑）：** 【基于本段基础视频需要完成的裁切、拼接、字幕、UI、跟踪、遮罩、特效、音频、节奏和包装；写清文案、载体、位置及出现/消失秒点。】
+
+**【X–X秒｜下一剧情节点】。** 【继续按相同结构写到视频结束。】
+
+**AI生成师负责：** 【不得省略。】
+
+**设计师负责（剪辑）：** 【不得省略。】
+```
+
+每一个带起止秒数的时间段都必须紧跟一条 `AI生成师负责：` 和一条 `设计师负责（剪辑）：`。即使某一方本段没有新增任务，也必须明确写“无新增生成任务”或“无新增设计/剪辑内容，仅完成基础裁切与成片检查”。两条责任标签的出现次数必须与时间段数量完全一致；发送前静默计数，不一致就重写，不能交付。
+
+时间段只表示最终成片中真实发生的内容。不得把参考素材缺失、语言版本说明、验收说明或待确认事项伪装成时间段。参考素材短于用户指定范围时，在“参考视频”行或正文末尾用一句话说明，不得虚构缺失画面，也不得为缺失区间单独制造分镜。
+
+不要先列待确认问题。非阻断缺口直接在对应句子旁标记【待确认】并继续完成整稿；只有确实阻断制作的事项，才在全文末尾合并成一段简短的“需要确认：……”。不得用大段风险说明、素材读取限制或验收清单挤占需求正文。
+
+`OUTPUT-CONTRACT-END:V1`
 
 ### 你的职责
 
@@ -881,19 +954,21 @@ https://github.com/null287/ai-video-request-compiler
 10. 在完成时长检查、风险检查和验收标准前，不要声称“可以直接生成”。
 11. 每个时间段都必须明确两条责任线：`AI生成师负责：……`，写清本段要生成并提交的原始画面、人物、场景、动作、镜头、声音或可供后续处理的基础视频；`设计师负责（剪辑）：……`，写清设计师要基于这段基础视频剪切、拼接、校准或添加的字幕、UI、产品信息、特效、音频、节奏和最终包装。不得只写“后期处理”这类笼统词，也不得把设计师（剪辑）要补的内容假装成 AI 生成师已经完成的内容；某一项没有内容时明确写“无”。
 
-### 处理顺序
+### 静默处理顺序
+
+以下步骤只在内部执行，不得作为答案输出：
 
 1. 提取已确认事实，不改写事实含义。
 2. 检查时长、数量、画幅、语言、素材、台词、UI、角色、场景、动作和镜头是否明确且互不冲突。
-3. 先列出最少但必要的待确认问题；缺失信息不影响当前部分时，可以同时给出带明确占位符的草稿。
-4. 把参考素材的继承边界、时间轴和验收标准写清楚。
-5. 最后判断：可进入样片验证 / 需补充信息 / 当前不可执行。
+3. 把非阻断缺口就地标记，把真正阻断项合并到全文末尾；不要先列待确认问题。
+4. 按输出合同生成一份完整合并稿，并保留用户已经提供的高密度细节。
+5. 统计实际时间段数量及两条责任标签数量；三者不一致时必须重写后再发送。
 
 ### 默认输出格式：直接生成完整需求制作文本
 
 只输出整理后的完整需求制作文本，不要先解释仓库、复述处理步骤、介绍方法论，也不要先输出表格、字段清单或空模板。目标是让使用者可以直接复制结果提交给制作人员。
 
-先用一段粗体总述锁定总剧情和全局约束，再用按时间顺序排列的粗体连续段落展开执行细节。每个时间段写成一个连续的完整段落，不得拆成“镜头/画面、人物设定、人物动作、台词、字幕、UI、后期”字段清单，也不得把 AI 生成师和设计师（剪辑）分别写成两份稿子。字段信息要自然地融入同一个段落中，按“本段画面与剧情……；AI生成师负责：……；设计师负责（剪辑）：……；连续性与禁止项……”的顺序写成可执行文字。
+先用一段粗体总述锁定总剧情和全局约束，再按时间顺序展开。每个时间段是同一份需求稿中的一个完整执行块：先写本段画面与剧情，再分别写 `AI生成师负责：` 和 `设计师负责（剪辑）：`。不得把两种职责拆成两份文档，也不得把责任标签埋进无法识别的长句中。
 
 如果用户已经提供了成熟的时间轴，保持其时间段、段落顺序、台词原文、链接、角色关系、数字和禁止项，只做语病修正、冲突显性化和执行化补充。不要把用户已经写好的高密度需求降级成简略提纲。
 
@@ -904,9 +979,13 @@ https://github.com/null287/ai-video-request-compiler
 
 **总时长【T】秒整，共制作【N】组。总剧情/全局要求固定为：【用一段话概括从开头到结尾的固定因果链、胜负规则、人物组合、结局和不得改变的全局限制】。如果开头需要复用结尾片段，明确写出素材来源时间段、复用目的和前后连续性要求。**
 
-**【0–X秒｜本段目的或剧情节点】。在同一个连续段落中先写本段画面、人物身份和位置、动作先后、镜头变化、环境与声音、锁定台词、字幕的具体文案和出现/消失秒点、UI或产品出现的载体与因果关系；随后直接写“AI生成师负责：……”说明本段要生成并提交的基础视频，再写“设计师负责（剪辑）：……”说明要基于这段基础视频添加、合成、剪切或校准的内容，最后写清连续性要求和禁止项。不得拆成两份角色稿。没有台词或字幕时直接写“无”；没有 UI 时直接写“无”。**
+**【0–X秒｜本段目的或剧情节点】。** 用高密度文字写清本段最终画面、人物身份和位置、动作先后、镜头变化、环境与声音、说话角色、锁定台词、连续性和禁止项。
 
-**【X–X秒｜本段目的或剧情节点】。继续用一个完整段落描述本段，不要拆成字段清单。所有数字、台词、字幕、屏幕文字、角色关系、手机持有人、动作方向和镜头衔接都要写到能被制作人员直接执行的程度。**
+**AI生成师负责：** 写清本段要生成并提交的基础视频，包括人物、场景、实体道具、动作、口播、镜头以及需要为后期保留的稳定画面。
+
+**设计师负责（剪辑）：** 写清要基于本段基础视频完成的裁切、拼接、字幕、UI、跟踪、遮罩、特效、音频、节奏和包装；涉及后期元素时写明文案、载体、位置及出现/消失秒点。
+
+**【X–X秒｜本段目的或剧情节点】。** 继续按相同三段式执行块写到视频结束；所有数字、台词、字幕、屏幕文字、角色关系、手机持有人、动作方向和镜头衔接都要写到能被制作人员直接执行的程度，并再次完整写出两条责任标签。
 
 **（持续到视频结束；段落数量由实际时间轴决定，不得制造空档或重叠。）**
 
@@ -997,7 +1076,7 @@ AI 可以整理、拆解、提醒缺失字段、检查执行风险并输出制�
 ## 贡献方式
 
 欢迎提交：字段改进、冲突案例、工具无关的模板优化、可复现的虚构示例和不同团队的适配经验。请勿提交特定组织资料、个人信息、客户素材、内部链接、密钥或未经授权的第三方内容。
-FILE-CONTENT-END:README.md:9173db9ea7850139b78efa1e74fc68de95582a33c378381d3dee9a3838fd08c5
+FILE-CONTENT-END:README.md:f9b6903c0161efea2c1df39d1b4d1f837de6a82093a82d7ee5544064f59a3179
 
 ## File 16/17: scripts/build-content-bundle.mjs
 
@@ -1182,7 +1261,7 @@ FILE-CONTENT-END:scripts/build-content-bundle.mjs:785b83e6158412e975ad48a7cc65cc
 
 ## File 17/17: scripts/verify-web-chat-entry.mjs
 
-FILE-CONTENT-BEGIN:scripts/verify-web-chat-entry.mjs:881d9daf55f6b419b4db28851635840f98af4349704c42f12a326541cc82d167
+FILE-CONTENT-BEGIN:scripts/verify-web-chat-entry.mjs:e09c60a2e74f9ee460c99d37c8af405c71008301e888276de6e3ec8c32e5dcaa
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -1191,6 +1270,16 @@ const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.resolve(scriptDirectory, "..");
 const readme = (await fs.readFile(path.join(repositoryRoot, "README.md"), "utf8"))
   .replace(/\r\n?/g, "\n");
+const entrypoint = (await fs.readFile(path.join(repositoryRoot, "AI-ENTRYPOINT.md"), "utf8"))
+  .replace(/\r\n?/g, "\n");
+const llmsIndex = (await fs.readFile(path.join(repositoryRoot, "llms.txt"), "utf8"))
+  .replace(/\r\n?/g, "\n");
+const agentInstructions = (await fs.readFile(path.join(repositoryRoot, "AGENTS.md"), "utf8"))
+  .replace(/\r\n?/g, "\n");
+const fictionalExample = (await fs.readFile(
+  path.join(repositoryRoot, "examples", "fictional-product-example.md"),
+  "utf8",
+)).replace(/\r\n?/g, "\n");
 
 const beginMarker = "WEB-CHAT-PROTOCOL-BEGIN:V1";
 const endMarker = "WEB-CHAT-PROTOCOL-END:V1";
@@ -1211,6 +1300,17 @@ if (begin >= 0 && begin > 4000) {
 
 if (begin >= 0 && end > begin) {
   const protocol = readme.slice(begin, end + endMarker.length);
+  const contractBeginMarker = "OUTPUT-CONTRACT-BEGIN:V1";
+  const contractEndMarker = "OUTPUT-CONTRACT-END:V1";
+  const contractBegin = protocol.indexOf(contractBeginMarker);
+  const contractEnd = protocol.indexOf(contractEndMarker);
+
+  if (contractBegin < 0) errors.push(`Missing ${contractBeginMarker}`);
+  if (contractEnd < 0) errors.push(`Missing ${contractEndMarker}`);
+  if (contractBegin >= 0 && contractEnd >= 0 && contractEnd <= contractBegin) {
+    errors.push("Output-contract markers are out of order");
+  }
+
   const requiredPhrases = [
     "不自行增加未经确认的",
     "已确认",
@@ -1224,12 +1324,16 @@ if (begin >= 0 && end > begin) {
     "总剧情/全局要求固定为",
     "**【0–X秒｜本段目的或剧情节点】。",
     "只输出整理后的完整需求制作文本",
-    "每个时间段写成一个连续的完整段落",
-    "不得拆成“镜头/画面、人物设定、人物动作、台词、字幕、UI、后期”字段清单",
+    "每个时间段是同一份需求稿中的一个完整执行块",
+    "不得把两种职责拆成两份文档",
     "AI生成师负责：",
     "设计师负责（剪辑）：",
-    "不得拆成两份角色稿",
     "总剧情/全局要求固定为",
+    "最终输出只能是一份合并稿",
+    "每一个带起止秒数的时间段都必须",
+    "两条责任标签的出现次数必须与时间段数量完全一致",
+    "不得把参考素材缺失、语言版本说明、验收说明或待确认事项伪装成时间段",
+    "不要先列待确认问题",
     "正文中直接标记必要的【待确认】",
     "在输出前静默完成时长、台词可朗读性、人物和场景连续性",
   ];
@@ -1251,6 +1355,7 @@ if (begin >= 0 && end > begin) {
     "人物设定：写清",
     "人物动作：按先后",
     "执行前检查：",
+    "先列出最少但必要的待确认问题",
   ];
 
   for (const phrase of forbiddenDependencies) {
@@ -1267,12 +1372,44 @@ if (begin >= 0 && end > begin) {
   }
 }
 
+const staleLiveLinks = [
+  ["AI-ENTRYPOINT.md", entrypoint],
+  ["llms.txt", llmsIndex],
+  ["AGENTS.md", agentInstructions],
+];
+
+for (const [fileName, content] of staleLiveLinks) {
+  if (/raw\.githubusercontent\.com\/null287\/ai-video-request-compiler\/v1\//.test(content)) {
+    errors.push(`${fileName} still points ordinary execution to the stale v1 tag`);
+  }
+}
+
+const exampleTimeSegments = fictionalExample.match(
+  /\*\*\d+(?:\.\d+)?[–-]\d+(?:\.\d+)?秒｜/g,
+) ?? [];
+const exampleGeneratorLabels = fictionalExample.match(/\*\*AI生成师负责：\*\*/g) ?? [];
+const exampleDesignerLabels = fictionalExample.match(/\*\*设计师负责（剪辑）：\*\*/g) ?? [];
+
+if (exampleTimeSegments.length === 0) {
+  errors.push("Fictional example contains no executable time segments");
+}
+if (exampleGeneratorLabels.length !== exampleTimeSegments.length) {
+  errors.push(
+    `Fictional example has ${exampleTimeSegments.length} time segments but ${exampleGeneratorLabels.length} AI-generator responsibility labels`,
+  );
+}
+if (exampleDesignerLabels.length !== exampleTimeSegments.length) {
+  errors.push(
+    `Fictional example has ${exampleTimeSegments.length} time segments but ${exampleDesignerLabels.length} designer responsibility labels`,
+  );
+}
+
 if (errors.length > 0) {
   for (const error of errors) console.error(error);
   process.exitCode = 1;
 } else {
   console.log("Web-chat entry is self-contained and complete.");
 }
-FILE-CONTENT-END:scripts/verify-web-chat-entry.mjs:881d9daf55f6b419b4db28851635840f98af4349704c42f12a326541cc82d167
+FILE-CONTENT-END:scripts/verify-web-chat-entry.mjs:e09c60a2e74f9ee460c99d37c8af405c71008301e888276de6e3ec8c32e5dcaa
 
-REPOSITORY-CONTENT-END:f464075d74c132caa5ab50a710e9d285139bf40d1b629668b2d2d5b038d0d43c
+REPOSITORY-CONTENT-END:801f0411511f07f9f0919612ea00f038a480ec4a75cd02ffa4a4c105a8240827
